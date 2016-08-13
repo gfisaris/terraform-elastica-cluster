@@ -37,5 +37,10 @@ resource "aws_instance" "terraform-ec2_instance-X" {
 			"sudo chown -R centos:centos /terraform"
 		]
 	}
+	
+	provisioner "file" {
+		source = "provisioning.scripts/"
+		destination = "/terraform.aws/provisioning.scripts/"
+	}
 
 }
