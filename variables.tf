@@ -10,3 +10,7 @@ variable "aws_region" {
     description = "Which AWS Region will be used ?"
     default = "eu-west-1"
 }
+
+variable "ssh_key_path" {
+    description = "Path to the private portion of the SSH key specified."
+}
