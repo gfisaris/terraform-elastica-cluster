@@ -30,5 +30,12 @@ resource "aws_instance" "terraform-ec2_instance-X" {
 			"sudo yum update -y"
 		]
 	}
+	
+	provisioner "remote-exec" {
+		inline = [
+			"sudo mkdir -p /terraform/provisioning.scripts/",
+			"sudo chown -R centos:centos /terraform"
+		]
+	}
 
 }
