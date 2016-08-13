@@ -2392,3 +2392,389 @@ infrastructure, so keep it safe. To inspect the complete state
 use the `terraform show` command.
 
 State path: terraform.tfstate[0m
+[0m[1maws_key_pair.gfisaris: Refreshing state... (ID: gfisaris)[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Refreshing state... (ID: sg-360f2e51)[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Refreshing state... (ID: i-0cdce931b242de74b)[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Destroying...[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still destroying... (10s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still destroying... (20s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still destroying... (30s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Destruction complete[21m[0m
+[0m[1maws_key_pair.gfisaris: Destroying...[21m[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Destroying...[21m[0m
+[0m[1maws_key_pair.gfisaris: Destruction complete[21m[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Destruction complete[21m[0m
+[0m[1m[32m
+Apply complete! Resources: 0 added, 0 changed, 3 destroyed.[0m
+[0m[1maws_key_pair.gfisaris: Creating...[21m
+  fingerprint: "" => "<computed>"
+  key_name:    "" => "gfisaris"
+  public_key:  "" => "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGOSDmseuFpAl9gAxQWgDnVqsDkhWz1CUJOLCLn7JCaUMqv5DTmpy28j7tfVSXwy5nVvLqhWF9almO+7IdQvbjiC165iFgy8dIArheT0pAHuS+RLeKVCZYiR7N6wM1srq5c/8Jj1Ze6BAY4uF18PGUsLsAK67D3Qa7B7QOSu/VGirNmDox0rRw4/orZpph1ZWsQGY60T3WJeWgW/hy+e1XoSk9WkyxyEWg9Hz+PNaBRrzGN7qI8zatq8dmyKZnI85Yy+zsK+ypf/wbC+Yberfo8YGfrY00pHQokpDFkGMYjYRQrAkzVkfeTOYsRHJTHYnUtbDBdfQarABQUfMjJ40F gfisars@gmail.com"[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Creating...[21m
+  description:                         "" => "Control Public Access to Terraform created EC2 Instances"
+  egress.#:                            "" => "1"
+  egress.482069346.cidr_blocks.#:      "" => "1"
+  egress.482069346.cidr_blocks.0:      "" => "0.0.0.0/0"
+  egress.482069346.from_port:          "" => "0"
+  egress.482069346.prefix_list_ids.#:  "" => "0"
+  egress.482069346.protocol:           "" => "-1"
+  egress.482069346.security_groups.#:  "" => "0"
+  egress.482069346.self:               "" => "false"
+  egress.482069346.to_port:            "" => "0"
+  ingress.#:                           "" => "1"
+  ingress.482069346.cidr_blocks.#:     "" => "1"
+  ingress.482069346.cidr_blocks.0:     "" => "0.0.0.0/0"
+  ingress.482069346.from_port:         "" => "0"
+  ingress.482069346.protocol:          "" => "-1"
+  ingress.482069346.security_groups.#: "" => "0"
+  ingress.482069346.self:              "" => "false"
+  ingress.482069346.to_port:           "" => "0"
+  name:                                "" => "VPC:SG:EC2:PublicAccess"
+  owner_id:                            "" => "<computed>"
+  vpc_id:                              "" => "<computed>"[0m
+[0m[1maws_key_pair.gfisaris: Creation complete[21m[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Creation complete[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Creating...[21m
+  ami:                                       "" => "ami-7abd0209"
+  availability_zone:                         "" => "<computed>"
+  ebs_block_device.#:                        "" => "<computed>"
+  ephemeral_block_device.#:                  "" => "<computed>"
+  instance_state:                            "" => "<computed>"
+  instance_type:                             "" => "t2.micro"
+  key_name:                                  "" => "gfisaris"
+  network_interface_id:                      "" => "<computed>"
+  placement_group:                           "" => "<computed>"
+  private_dns:                               "" => "<computed>"
+  private_ip:                                "" => "<computed>"
+  public_dns:                                "" => "<computed>"
+  public_ip:                                 "" => "<computed>"
+  root_block_device.#:                       "" => "1"
+  root_block_device.0.delete_on_termination: "" => "true"
+  root_block_device.0.iops:                  "" => "<computed>"
+  root_block_device.0.volume_size:           "" => "10"
+  root_block_device.0.volume_type:           "" => "gp2"
+  security_groups.#:                         "" => "<computed>"
+  source_dest_check:                         "" => "true"
+  subnet_id:                                 "" => "<computed>"
+  tags.%:                                    "" => "1"
+  tags.Name:                                 "" => "TerraForm Node X"
+  tenancy:                                   "" => "<computed>"
+  vpc_security_group_ids.#:                  "" => "1"
+  vpc_security_group_ids.1947090815:         "" => "sg-841130e3"[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (10s elapsed)[21m[0m
+[0m[1maws_key_pair.gfisaris: Refreshing state... (ID: gfisaris)[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Refreshing state... (ID: sg-841130e3)[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Refreshing state... (ID: i-0d37ffc222f93a9d3)[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Destroying...[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still destroying... (10s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still destroying... (20s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still destroying... (30s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Destruction complete[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Creating...[21m
+  ami:                                       "" => "ami-7abd0209"
+  availability_zone:                         "" => "<computed>"
+  ebs_block_device.#:                        "" => "<computed>"
+  ephemeral_block_device.#:                  "" => "<computed>"
+  instance_state:                            "" => "<computed>"
+  instance_type:                             "" => "t2.micro"
+  key_name:                                  "" => "gfisaris"
+  network_interface_id:                      "" => "<computed>"
+  placement_group:                           "" => "<computed>"
+  private_dns:                               "" => "<computed>"
+  private_ip:                                "" => "<computed>"
+  public_dns:                                "" => "<computed>"
+  public_ip:                                 "" => "<computed>"
+  root_block_device.#:                       "" => "1"
+  root_block_device.0.delete_on_termination: "" => "true"
+  root_block_device.0.iops:                  "" => "<computed>"
+  root_block_device.0.volume_size:           "" => "10"
+  root_block_device.0.volume_type:           "" => "gp2"
+  security_groups.#:                         "" => "<computed>"
+  source_dest_check:                         "" => "true"
+  subnet_id:                                 "" => "<computed>"
+  tags.%:                                    "" => "1"
+  tags.Name:                                 "" => "TerraForm Node X"
+  tenancy:                                   "" => "<computed>"
+  vpc_security_group_ids.#:                  "" => "1"
+  vpc_security_group_ids.1947090815:         "" => "sg-841130e3"[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (2s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (10s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (12s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Provisioning with 'remote-exec'...[21m[0m
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): Connecting to remote host via SSH...
+aws_instance.terraform-ec2_instance-X (remote-exec):   Host: 52.209.168.16
+aws_instance.terraform-ec2_instance-X (remote-exec):   User: centos
+aws_instance.terraform-ec2_instance-X (remote-exec):   Password: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   Private key: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   SSH Agent: false
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (20s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (22s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (30s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (32s elapsed)[21m[0m
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): Connecting to remote host via SSH...
+aws_instance.terraform-ec2_instance-X (remote-exec):   Host: 52.209.168.16
+aws_instance.terraform-ec2_instance-X (remote-exec):   User: centos
+aws_instance.terraform-ec2_instance-X (remote-exec):   Password: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   Private key: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   SSH Agent: false
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): Connecting to remote host via SSH...
+aws_instance.terraform-ec2_instance-X (remote-exec):   Host: 52.209.168.16
+aws_instance.terraform-ec2_instance-X (remote-exec):   User: centos
+aws_instance.terraform-ec2_instance-X (remote-exec):   Password: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   Private key: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   SSH Agent: false
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (40s elapsed)[21m[0m
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): Connecting to remote host via SSH...
+aws_instance.terraform-ec2_instance-X (remote-exec):   Host: 52.209.168.16
+aws_instance.terraform-ec2_instance-X (remote-exec):   User: centos
+aws_instance.terraform-ec2_instance-X (remote-exec):   Password: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   Private key: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   SSH Agent: false
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (42s elapsed)[21m[0m
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): Connecting to remote host via SSH...
+aws_instance.terraform-ec2_instance-X (remote-exec):   Host: 52.209.168.16
+aws_instance.terraform-ec2_instance-X (remote-exec):   User: centos
+aws_instance.terraform-ec2_instance-X (remote-exec):   Password: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   Private key: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   SSH Agent: false
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): Connecting to remote host via SSH...
+aws_instance.terraform-ec2_instance-X (remote-exec):   Host: 52.209.168.16
+aws_instance.terraform-ec2_instance-X (remote-exec):   User: centos
+aws_instance.terraform-ec2_instance-X (remote-exec):   Password: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   Private key: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   SSH Agent: false
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (50s elapsed)[21m[0m
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): Connecting to remote host via SSH...
+aws_instance.terraform-ec2_instance-X (remote-exec):   Host: 52.209.168.16
+aws_instance.terraform-ec2_instance-X (remote-exec):   User: centos
+aws_instance.terraform-ec2_instance-X (remote-exec):   Password: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   Private key: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   SSH Agent: false
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (52s elapsed)[21m[0m
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): Connecting to remote host via SSH...
+aws_instance.terraform-ec2_instance-X (remote-exec):   Host: 52.209.168.16
+aws_instance.terraform-ec2_instance-X (remote-exec):   User: centos
+aws_instance.terraform-ec2_instance-X (remote-exec):   Password: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   Private key: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   SSH Agent: false
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): Connecting to remote host via SSH...
+aws_instance.terraform-ec2_instance-X (remote-exec):   Host: 52.209.168.16
+aws_instance.terraform-ec2_instance-X (remote-exec):   User: centos
+aws_instance.terraform-ec2_instance-X (remote-exec):   Password: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   Private key: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   SSH Agent: false
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (1m0s elapsed)[21m[0m
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): Connecting to remote host via SSH...
+aws_instance.terraform-ec2_instance-X (remote-exec):   Host: 52.209.168.16
+aws_instance.terraform-ec2_instance-X (remote-exec):   User: centos
+aws_instance.terraform-ec2_instance-X (remote-exec):   Password: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   Private key: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   SSH Agent: false
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (1m2s elapsed)[21m[0m
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): Connecting to remote host via SSH...
+aws_instance.terraform-ec2_instance-X (remote-exec):   Host: 52.209.168.16
+aws_instance.terraform-ec2_instance-X (remote-exec):   User: centos
+aws_instance.terraform-ec2_instance-X (remote-exec):   Password: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   Private key: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   SSH Agent: false
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): Connecting to remote host via SSH...
+aws_instance.terraform-ec2_instance-X (remote-exec):   Host: 52.209.168.16
+aws_instance.terraform-ec2_instance-X (remote-exec):   User: centos
+aws_instance.terraform-ec2_instance-X (remote-exec):   Password: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   Private key: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   SSH Agent: false
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (1m10s elapsed)[21m[0m
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): Connecting to remote host via SSH...
+aws_instance.terraform-ec2_instance-X (remote-exec):   Host: 52.209.168.16
+aws_instance.terraform-ec2_instance-X (remote-exec):   User: centos
+aws_instance.terraform-ec2_instance-X (remote-exec):   Password: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   Private key: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   SSH Agent: false
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (1m12s elapsed)[21m[0m
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): Connecting to remote host via SSH...
+aws_instance.terraform-ec2_instance-X (remote-exec):   Host: 52.209.168.16
+aws_instance.terraform-ec2_instance-X (remote-exec):   User: centos
+aws_instance.terraform-ec2_instance-X (remote-exec):   Password: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   Private key: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   SSH Agent: false
+Refreshing Terraform state in-memory prior to plan...
+The refreshed state will be used to calculate this plan, but
+will not be persisted to local or remote state storage.
+
+[0m[1maws_key_pair.gfisaris: Refreshing state... (ID: gfisaris)[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Refreshing state... (ID: sg-841130e3)[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Refreshing state... (ID: i-00b1b5c5a500119ea)[0m
+
+The Terraform execution plan has been generated and is shown below.
+Resources are shown in alphabetical order for quick scanning. Green resources
+will be created (or destroyed and then created if an existing resource
+exists), yellow resources are being changed in-place, and red resources
+will be destroyed. Cyan entries are data sources to be read.
+
+Note: You didn't specify an "-out" parameter to save this plan, so when
+"apply" is called, Terraform can't guarantee this is what will execute.
+
+[32m-/+ aws_instance.terraform-ec2_instance-X (tainted)
+[0m    ami:                                       "ami-7abd0209" => "ami-7abd0209"
+    availability_zone:                         "eu-west-1b" => "<computed>"
+    ebs_block_device.#:                        "0" => "<computed>"
+    ephemeral_block_device.#:                  "0" => "<computed>"
+    instance_state:                            "running" => "<computed>"
+    instance_type:                             "t2.micro" => "t2.micro"
+    key_name:                                  "gfisaris" => "gfisaris"
+    network_interface_id:                      "eni-d074c08f" => "<computed>"
+    placement_group:                           "" => "<computed>"
+    private_dns:                               "ip-172-31-47-176.eu-west-1.compute.internal" => "<computed>"
+    private_ip:                                "172.31.47.176" => "<computed>"
+    public_dns:                                "ec2-52-209-168-16.eu-west-1.compute.amazonaws.com" => "<computed>"
+    public_ip:                                 "52.209.168.16" => "<computed>"
+    root_block_device.#:                       "1" => "1"
+    root_block_device.0.delete_on_termination: "true" => "true"
+    root_block_device.0.iops:                  "100" => "<computed>"
+    root_block_device.0.volume_size:           "10" => "10"
+    root_block_device.0.volume_type:           "gp2" => "gp2"
+    security_groups.#:                         "0" => "<computed>"
+    source_dest_check:                         "true" => "true"
+    subnet_id:                                 "subnet-924371cb" => "<computed>"
+    tags.%:                                    "1" => "1"
+    tags.Name:                                 "TerraForm Node X" => "TerraForm Node X"
+    tenancy:                                   "default" => "<computed>"
+    vpc_security_group_ids.#:                  "1" => "1"
+    vpc_security_group_ids.1947090815:         "sg-841130e3" => "sg-841130e3"
+[0m
+[0m
+[0m[1mPlan:[0m 1 to add, 0 to change, 1 to destroy.[0m
+[0m[1maws_key_pair.gfisaris: Refreshing state... (ID: gfisaris)[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Refreshing state... (ID: sg-841130e3)[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Refreshing state... (ID: i-00b1b5c5a500119ea)[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Destroying...[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still destroying... (10s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still destroying... (20s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still destroying... (30s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Destruction complete[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Creating...[21m
+  ami:                                       "" => "ami-7abd0209"
+  availability_zone:                         "" => "<computed>"
+  ebs_block_device.#:                        "" => "<computed>"
+  ephemeral_block_device.#:                  "" => "<computed>"
+  instance_state:                            "" => "<computed>"
+  instance_type:                             "" => "t2.micro"
+  key_name:                                  "" => "gfisaris"
+  network_interface_id:                      "" => "<computed>"
+  placement_group:                           "" => "<computed>"
+  private_dns:                               "" => "<computed>"
+  private_ip:                                "" => "<computed>"
+  public_dns:                                "" => "<computed>"
+  public_ip:                                 "" => "<computed>"
+  root_block_device.#:                       "" => "1"
+  root_block_device.0.delete_on_termination: "" => "true"
+  root_block_device.0.iops:                  "" => "<computed>"
+  root_block_device.0.volume_size:           "" => "10"
+  root_block_device.0.volume_type:           "" => "gp2"
+  security_groups.#:                         "" => "<computed>"
+  source_dest_check:                         "" => "true"
+  subnet_id:                                 "" => "<computed>"
+  tags.%:                                    "" => "1"
+  tags.Name:                                 "" => "TerraForm Node X"
+  tenancy:                                   "" => "<computed>"
+  vpc_security_group_ids.#:                  "" => "1"
+  vpc_security_group_ids.1947090815:         "" => "sg-841130e3"[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (3s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (10s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (13s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (20s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (23s elapsed)[21m[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Refreshing state... (ID: sg-841130e3)[0m
+[0m[1maws_key_pair.gfisaris: Refreshing state... (ID: gfisaris)[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Refreshing state... (ID: i-0d9de00002ea58d03)[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Destroying...[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still destroying... (10s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still destroying... (20s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still destroying... (30s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still destroying... (40s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still destroying... (50s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Destruction complete[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Creating...[21m
+  ami:                                       "" => "ami-7abd0209"
+  availability_zone:                         "" => "<computed>"
+  ebs_block_device.#:                        "" => "<computed>"
+  ephemeral_block_device.#:                  "" => "<computed>"
+  instance_state:                            "" => "<computed>"
+  instance_type:                             "" => "t2.micro"
+  key_name:                                  "" => "gfisaris"
+  network_interface_id:                      "" => "<computed>"
+  placement_group:                           "" => "<computed>"
+  private_dns:                               "" => "<computed>"
+  private_ip:                                "" => "<computed>"
+  public_dns:                                "" => "<computed>"
+  public_ip:                                 "" => "<computed>"
+  root_block_device.#:                       "" => "1"
+  root_block_device.0.delete_on_termination: "" => "true"
+  root_block_device.0.iops:                  "" => "<computed>"
+  root_block_device.0.volume_size:           "" => "10"
+  root_block_device.0.volume_type:           "" => "gp2"
+  security_groups.#:                         "" => "<computed>"
+  source_dest_check:                         "" => "true"
+  subnet_id:                                 "" => "<computed>"
+  tags.%:                                    "" => "1"
+  tags.Name:                                 "" => "TerraForm Node X"
+  tenancy:                                   "" => "<computed>"
+  vpc_security_group_ids.#:                  "" => "1"
+  vpc_security_group_ids.1947090815:         "" => "sg-841130e3"[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (2s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (10s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (12s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (20s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (22s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Provisioning with 'remote-exec'...[21m[0m
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): Connecting to remote host via SSH...
+aws_instance.terraform-ec2_instance-X (remote-exec):   Host: 52.48.8.180
+aws_instance.terraform-ec2_instance-X (remote-exec):   User: centos
+aws_instance.terraform-ec2_instance-X (remote-exec):   Password: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   Private key: true
+aws_instance.terraform-ec2_instance-X (remote-exec):   SSH Agent: false
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (30s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (32s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (40s elapsed)[21m[0m
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): Connecting to remote host via SSH...
+aws_instance.terraform-ec2_instance-X (remote-exec):   Host: 52.48.8.180
+aws_instance.terraform-ec2_instance-X (remote-exec):   User: centos
+aws_instance.terraform-ec2_instance-X (remote-exec):   Password: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   Private key: true
+aws_instance.terraform-ec2_instance-X (remote-exec):   SSH Agent: false
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (42s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (50s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (52s elapsed)[21m[0m
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): Connecting to remote host via SSH...
+aws_instance.terraform-ec2_instance-X (remote-exec):   Host: 52.48.8.180
+aws_instance.terraform-ec2_instance-X (remote-exec):   User: centos
+aws_instance.terraform-ec2_instance-X (remote-exec):   Password: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   Private key: true
+aws_instance.terraform-ec2_instance-X (remote-exec):   SSH Agent: false
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (1m0s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Still creating... (1m2s elapsed)[21m[0m
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): Connecting to remote host via SSH...
+aws_instance.terraform-ec2_instance-X (remote-exec):   Host: 52.48.8.180
+aws_instance.terraform-ec2_instance-X (remote-exec):   User: centos
+aws_instance.terraform-ec2_instance-X (remote-exec):   Password: false
+aws_instance.terraform-ec2_instance-X (remote-exec):   Private key: true
+aws_instance.terraform-ec2_instance-X (remote-exec):   SSH Agent: false
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): Connected!
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): total 12
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): drwx------. 3 centos centos  92 Aug 13 22:03 .
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): drwxr-xr-x. 3 root   root    19 Aug 13 22:03 ..
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): -rw-r--r--. 1 centos centos  18 Nov 20  2015 .bash_logout
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): -rw-r--r--. 1 centos centos 193 Nov 20  2015 .bash_profile
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): -rw-r--r--. 1 centos centos 231 Nov 20  2015 .bashrc
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): drwx------. 2 centos centos  28 Aug 13 22:03 .ssh
+[0m[0maws_instance.terraform-ec2_instance-X (remote-exec): -rw-rw-r--. 1 centos centos   0 Aug 13 22:03 TerraForm.hello
+[0m[1maws_instance.terraform-ec2_instance-X: Creation complete[21m[0m
+[0m[1m[32m
+Apply complete! Resources: 1 added, 0 changed, 1 destroyed.[0m
+[0m
+The state of your infrastructure has been saved to the path
+below. This state is required to modify and destroy your
+infrastructure, so keep it safe. To inspect the complete state
+use the `terraform show` command.
+
+State path: terraform.tfstate[0m

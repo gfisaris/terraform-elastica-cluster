@@ -184,3 +184,87 @@ Terraform does not automatically rollback in the face of errors.
 Instead, your Terraform state file has been partially updated with
 any resources that successfully completed. Please address the error
 above and apply again to incrementally change your infrastructure.[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* file: open : no such file or directory in:
+
+${file("${var.key_path}")}
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* ssh: handshake failed: ssh: unable to authenticate, attempted methods [none], no supported methods remain
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* file: open /home/gfisaris/myTerraformProjects/terraform-elastica-cluster/{var.key_path}: no such file or directory in:
+
+${file("${path.module}/{var.key_path}")}
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31minvalid value "key_path=.ssh/id_rsa" for flag -var: Cannot parse value for variable key_path ("key_path=.ssh/id_rsa") as valid HCL: At 1:10: Unknown token: 1:10 PERIOD .[0m[0m
+[31mUsage: terraform apply [options] [DIR-OR-PLAN]
+
+  Builds or changes infrastructure according to Terraform configuration
+  files in DIR.
+
+  By default, apply scans the current directory for the configuration
+  and applies the changes appropriately. However, a path to another
+  configuration or an execution plan can be provided. Execution plans can be
+  used to only execute a pre-determined set of actions.
+
+  DIR can also be a SOURCE as given to the "init" command. In this case,
+  apply behaves as though "init" was called followed by "apply". This only
+  works for sources that aren't files, and only if the current working
+  directory is empty of Terraform files. This is a shortcut for getting
+  started.
+
+Options:
+
+  -backup=path           Path to backup the existing state file before
+                         modifying. Defaults to the "-state-out" path with
+                         ".backup" extension. Set to "-" to disable backup.
+
+  -input=true            Ask for input for variables if not directly set.
+
+  -no-color              If specified, output won't contain any color.
+
+  -parallelism=n         Limit the number of concurrent operations.
+                         Defaults to 10.
+
+  -refresh=true          Update state prior to checking for differences. This
+                         has no effect if a plan file is given to apply.
+
+  -state=path            Path to read and save state (unless state-out
+                         is specified). Defaults to "terraform.tfstate".
+
+  -state-out=path        Path to write state to that is different than
+                         "-state". This can be used to preserve the old
+                         state.
+
+  -target=resource       Resource to target. Operation will be limited to this
+                         resource and its dependencies. This flag can be used
+                         multiple times.
+
+  -var 'foo=bar'         Set a variable in the Terraform configuration. This
+                         flag can be set multiple times.
+
+  -var-file=foo          Set variables in the Terraform configuration from
+                         a file. If "terraform.tfvars" is present, it will be
+                         automatically loaded if this flag is not specified.[0m[0m

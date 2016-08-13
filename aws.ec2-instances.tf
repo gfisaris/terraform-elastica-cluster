@@ -19,7 +19,7 @@ resource "aws_instance" "terraform-ec2_instance-X" {
 		type = "ssh"
 		host = "${self.public_ip}"
 		user = "centos"
-		private_key = "${file(".ssh/id_rsa")}"
+		private_key = "${file("${path.module}/${var.key_path}")}"
 		agent = "false"
 		timeout = "60s"
 	}
