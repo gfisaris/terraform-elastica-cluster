@@ -8,4 +8,5 @@ variable "aws_secret_key" {
 
 variable "aws_region" {
     description = "Which AWS Region will be used ?"
+    default = "eu-west-1"
 }
