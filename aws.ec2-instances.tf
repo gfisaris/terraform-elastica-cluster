@@ -4,6 +4,12 @@ resource "aws_instance" "terraform-ec2_instance-X" {
 	
 	key_name		= "${aws_key_pair.gfisaris.key_name}"
 
+	root_block_device {
+		volume_type		= "gp2"
+		volume_size		= 10
+		delete_on_termination	= true
+	}
+
 	tags {
 		"Name"		= "TerraForm Node X"
 	}
