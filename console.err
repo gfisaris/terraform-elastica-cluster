@@ -1,0 +1,5 @@
+Error loading config: Error loading /home/gfisaris/myTerraformProjects/terraform-elastica-cluster/aws.ec2-instances.tf: Error reading config for aws_instance[terraform-ec2_instance-X]: aws_key_pair.gfisaris_key_name: resource variables must be three parts: TYPE.NAME.ATTR in:
+
+${aws_key_pair.gfisaris_key_name}
+
+
