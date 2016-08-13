@@ -16,8 +16,12 @@ resource "aws_instance" "terraform-ec2_instance-X" {
 	}
 
 	connection {
+		type = "ssh"
+		host = "${self.public_ip}"
 		user = "centos"
-		key_file = "${var.ssh_key_path}"
+		private_key = "${file(".ssh/id_rsa")}"
+		agent = "false"
+		timeout = "60s"
 	}
 
 	provisioner "remote-exec" {
