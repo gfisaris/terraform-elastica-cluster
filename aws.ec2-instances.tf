@@ -45,7 +45,8 @@ resource "aws_instance" "terraform-ec2_instance-X" {
 	
 	provisioner "remote-exec" {
 		inline = [
-			"sudo bash /terraform/provisioning.scripts/execute-initialization.cmds.sh"
+			"sudo bash /terraform/provisioning.scripts/execute-initialization.cmds.sh",
+			"sudo bash /terraform/provisioning.scripts/execute-configuration.cmds.sh"
 		]
 	}
 
