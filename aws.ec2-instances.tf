@@ -20,4 +20,11 @@ resource "aws_instance" "terraform-ec2_instance-X" {
 		key_file = "${var.ssh_key_path}"
 	}
 
+	provisioner "remote-exec" {
+		inline = [
+			"touch ~/TerraForm.hello",
+			"ls -all ~/"
+		]
+	}
+
 }
