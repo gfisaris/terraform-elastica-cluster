@@ -26,8 +26,8 @@ resource "aws_instance" "terraform-ec2_instance-X" {
 
 	provisioner "remote-exec" {
 		inline = [
-			"touch ~/TerraForm.hello",
-			"ls -all ~/"
+			"sudo yum clean all",
+			"sudo yum update -y"
 		]
 	}
 
