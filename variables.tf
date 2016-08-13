@@ -11,6 +11,6 @@ variable "aws_region" {
     default = "eu-west-1"
 }
 
-variable "ssh_key_path" {
+variable "key_path" {
     description = "Path to the private portion of the SSH key specified."
 }
