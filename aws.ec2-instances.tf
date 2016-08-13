@@ -14,4 +14,10 @@ resource "aws_instance" "terraform-ec2_instance-X" {
 	tags {
 		"Name"		= "TerraForm Node X"
 	}
+
+	connection {
+		user = "centos"
+		key_file = "${var.ssh_key_path}"
+	}
+
 }
