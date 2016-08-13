@@ -8,9 +8,9 @@ cat <<EOT >> /etc/elasticsearch/elasticsearch.yml
 #
 
 # Elastica Node Name
-node.name: "my Elastica Node X"
+node.name: myelastica-node-x
 # Elastica Cluster Name
-cluster.name: myElastica-Cluster-X
+cluster.name: myelastica-cluster-x
 
 # Is this Node an Elastica Master Node?
 node.master: true
@@ -23,7 +23,14 @@ index.number_of_shards: 1
 index.number_of_replicas: 0
 
 # From which Network is this Elastica Cluster Accessible?
-network.bind_host: 0.0.0.0	
+network.host: 0.0.0.0
+# From which Port is this Elastica Cluster Accessible?
+http.port: 9200
+
+# Where to store ElasticSearch Data Files?
+path.data: /var/lib/elasticsearch
+# Where to store ElasticSearch Log Files?
+path.logs: /var/log/elasticsearch
 
 EOT
 
