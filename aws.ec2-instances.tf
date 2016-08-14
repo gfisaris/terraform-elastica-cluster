@@ -11,7 +11,7 @@ resource "aws_instance" "terraform-ec2_instance-X" {
 		delete_on_termination	= true
 	}
 
-	user_data = "${file("ec2-instance_userdata.sh")}"
+	user_data = "${file("aws.ec2-instance_userdata.sh")}"
 
 	tags {
 		"Name"		= "TerraForm Node X"
