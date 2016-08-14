@@ -271,3 +271,14 @@ Options:
 [31mErrors:
 [0m[0m
 [31m  * aws_elb_attachment.elastica-elb_attach-ec2_instace-X: instance must be a single value, not a list[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* aws_security_group.sg-ec2-instances-elastica: Error authorizing security group ingress rules: InvalidParameterValue: Invalid value 'http' for IP protocol. Unknown protocol.
+	status code: 400, request id: 0af74bda-a876-4f09-92c8-4d2e2c1b1d36
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m

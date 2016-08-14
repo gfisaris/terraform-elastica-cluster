@@ -19955,3 +19955,155 @@ infrastructure, so keep it safe. To inspect the complete state
 use the `terraform show` command.
 
 State path: terraform.tfstate[0m
+Refreshing Terraform state in-memory prior to plan...
+The refreshed state will be used to calculate this plan, but
+will not be persisted to local or remote state storage.
+
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Refreshing state... (ID: sg-6be8c90c)[0m
+[0m[1maws_key_pair.gfisaris: Refreshing state... (ID: gfisaris)[0m
+[0m[1maws_security_group.sg-ec2-elb-pubAccess: Refreshing state... (ID: sg-6ce8c90b)[0m
+[0m[1maws_elb.ec2_elb-Elastica: Refreshing state... (ID: ec2-elb-Elastica)[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Refreshing state... (ID: i-0c8aa86e4a9f54e0c)[0m
+[0m[1maws_elb_attachment.elastica-elb_attach-ec2_instace-X: Refreshing state... (ID: ec2-elb-Elastica-psgyv442fbatrbjtkcrz2573za)[0m
+
+The Terraform execution plan has been generated and is shown below.
+Resources are shown in alphabetical order for quick scanning. Green resources
+will be created (or destroyed and then created if an existing resource
+exists), yellow resources are being changed in-place, and red resources
+will be destroyed. Cyan entries are data sources to be read.
+
+Note: You didn't specify an "-out" parameter to save this plan, so when
+"apply" is called, Terraform can't guarantee this is what will execute.
+
+[33m~ aws_elb.ec2_elb-Elastica
+[0m    security_groups.#: "" => "<computed>"
+[0m
+[0m[33m~ aws_instance.terraform-ec2_instance-X
+[0m    vpc_security_group_ids.#: "" => "<computed>"
+[0m
+[0m[32m+ aws_security_group.sg-ec2-elb-elastica
+[0m    description: "Security Group attached to Elastica EC2 ELBs"
+    egress.#:    "<computed>"
+    ingress.#:   "<computed>"
+    name:        "VPC:SG:EC2:ELB:Elastica"
+    owner_id:    "<computed>"
+    vpc_id:      "<computed>"
+[0m
+[0m[32m+ aws_security_group.sg-ec2-instances-elastica
+[0m    description:                           "Security Group attached to Elastica EC2 Instances"
+    egress.#:                              "1"
+    egress.482069346.cidr_blocks.#:        "1"
+    egress.482069346.cidr_blocks.0:        "0.0.0.0/0"
+    egress.482069346.from_port:            "0"
+    egress.482069346.prefix_list_ids.#:    "0"
+    egress.482069346.protocol:             "-1"
+    egress.482069346.security_groups.#:    "0"
+    egress.482069346.self:                 "false"
+    egress.482069346.to_port:              "0"
+    ingress.#:                             "1"
+    ingress.~3046376398.cidr_blocks.#:     "0"
+    ingress.~3046376398.from_port:         "9200"
+    ingress.~3046376398.protocol:          "http"
+    ingress.~3046376398.security_groups.#: "<computed>"
+    ingress.~3046376398.self:              "false"
+    ingress.~3046376398.to_port:           "9200"
+    name:                                  "VPC:SG:EC2:Instances:ElasticaNodes"
+    owner_id:                              "<computed>"
+    vpc_id:                                "<computed>"
+[0m
+[0m[31m- aws_security_group.terraform-sg-ec2-pubAccess
+[0m[0m
+[0m
+[0m[1mPlan:[0m 2 to add, 2 to change, 1 to destroy.[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Refreshing state... (ID: sg-6be8c90c)[0m
+[0m[1maws_key_pair.gfisaris: Refreshing state... (ID: gfisaris)[0m
+[0m[1maws_security_group.sg-ec2-elb-pubAccess: Refreshing state... (ID: sg-6ce8c90b)[0m
+[0m[1maws_elb.ec2_elb-Elastica: Refreshing state... (ID: ec2-elb-Elastica)[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Refreshing state... (ID: i-0c8aa86e4a9f54e0c)[0m
+[0m[1maws_elb_attachment.elastica-elb_attach-ec2_instace-X: Refreshing state... (ID: ec2-elb-Elastica-psgyv442fbatrbjtkcrz2573za)[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Destroying...[21m[0m
+[0m[1maws_security_group.sg-ec2-elb-elastica: Creating...[21m
+  description: "" => "Security Group attached to Elastica EC2 ELBs"
+  egress.#:    "" => "<computed>"
+  ingress.#:   "" => "<computed>"
+  name:        "" => "VPC:SG:EC2:ELB:Elastica"
+  owner_id:    "" => "<computed>"
+  vpc_id:      "" => "<computed>"[0m
+[0m[1maws_security_group.sg-ec2-elb-elastica: Creation complete[21m[0m
+[0m[1maws_elb.ec2_elb-Elastica: Modifying...[21m
+  security_groups.#:          "1" => "2"
+  security_groups.1754757724: "" => "sg-d7eecfb0"
+  security_groups.42282682:   "sg-6ce8c90b" => "sg-6ce8c90b"[0m
+[0m[1maws_security_group.sg-ec2-instances-elastica: Creating...[21m
+  description:                                  "" => "Security Group attached to Elastica EC2 Instances"
+  egress.#:                                     "" => "1"
+  egress.482069346.cidr_blocks.#:               "" => "1"
+  egress.482069346.cidr_blocks.0:               "" => "0.0.0.0/0"
+  egress.482069346.from_port:                   "" => "0"
+  egress.482069346.prefix_list_ids.#:           "" => "0"
+  egress.482069346.protocol:                    "" => "-1"
+  egress.482069346.security_groups.#:           "" => "0"
+  egress.482069346.self:                        "" => "false"
+  egress.482069346.to_port:                     "" => "0"
+  ingress.#:                                    "" => "1"
+  ingress.531429651.cidr_blocks.#:              "" => "0"
+  ingress.531429651.from_port:                  "" => "9200"
+  ingress.531429651.protocol:                   "" => "http"
+  ingress.531429651.security_groups.#:          "" => "1"
+  ingress.531429651.security_groups.1754757724: "" => "sg-d7eecfb0"
+  ingress.531429651.self:                       "" => "false"
+  ingress.531429651.to_port:                    "" => "9200"
+  name:                                         "" => "VPC:SG:EC2:Instances:ElasticaNodes"
+  owner_id:                                     "" => "<computed>"
+  vpc_id:                                       "" => "<computed>"[0m
+[0m[1maws_elb.ec2_elb-Elastica: Modifications complete[21m[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Still destroying... (10s elapsed)[21m[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Still destroying... (20s elapsed)[21m[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Still destroying... (30s elapsed)[21m[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Still destroying... (40s elapsed)[21m[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Still destroying... (50s elapsed)[21m[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Still destroying... (1m0s elapsed)[21m[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Still destroying... (1m10s elapsed)[21m[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Still destroying... (1m20s elapsed)[21m[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Still destroying... (1m30s elapsed)[21m[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Still destroying... (1m40s elapsed)[21m[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Still destroying... (1m50s elapsed)[21m[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Still destroying... (2m0s elapsed)[21m[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Still destroying... (2m10s elapsed)[21m[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Still destroying... (2m20s elapsed)[21m[0m
+[0m[1maws_security_group.terraform-sg-ec2-pubAccess: Destruction complete[21m[0m
+[0m[1maws_security_group.sg-ec2-elb-elastica: Refreshing state... (ID: sg-d7eecfb0)[0m
+[0m[1maws_key_pair.gfisaris: Refreshing state... (ID: gfisaris)[0m
+[0m[1maws_security_group.sg-ec2-elb-pubAccess: Refreshing state... (ID: sg-6ce8c90b)[0m
+[0m[1maws_security_group.sg-ec2-instances-elastica: Refreshing state... (ID: sg-d6eecfb1)[0m
+[0m[1maws_elb.ec2_elb-Elastica: Refreshing state... (ID: ec2-elb-Elastica)[0m
+[0m[1maws_instance.terraform-ec2_instance-X: Refreshing state... (ID: i-0c8aa86e4a9f54e0c)[0m
+[0m[1maws_elb_attachment.elastica-elb_attach-ec2_instace-X: Refreshing state... (ID: ec2-elb-Elastica-psgyv442fbatrbjtkcrz2573za)[0m
+[0m[1maws_security_group.sg-ec2-instances-elastica: Modifying...[21m
+  egress.#:                                      "0" => "1"
+  egress.482069346.cidr_blocks.#:                "0" => "1"
+  egress.482069346.cidr_blocks.0:                "" => "0.0.0.0/0"
+  egress.482069346.from_port:                    "" => "0"
+  egress.482069346.prefix_list_ids.#:            "0" => "0"
+  egress.482069346.protocol:                     "" => "-1"
+  egress.482069346.security_groups.#:            "0" => "0"
+  egress.482069346.self:                         "" => "false"
+  egress.482069346.to_port:                      "" => "0"
+  ingress.#:                                     "0" => "1"
+  ingress.1009741871.cidr_blocks.#:              "0" => "0"
+  ingress.1009741871.from_port:                  "" => "9200"
+  ingress.1009741871.protocol:                   "" => "tcp"
+  ingress.1009741871.security_groups.#:          "0" => "1"
+  ingress.1009741871.security_groups.1754757724: "" => "sg-d7eecfb0"
+  ingress.1009741871.self:                       "" => "false"
+  ingress.1009741871.to_port:                    "" => "9200"[0m
+[0m[1maws_security_group.sg-ec2-instances-elastica: Modifications complete[21m[0m
+[0m[1m[32m
+Apply complete! Resources: 0 added, 1 changed, 0 destroyed.[0m
+[0m
+The state of your infrastructure has been saved to the path
+below. This state is required to modify and destroy your
+infrastructure, so keep it safe. To inspect the complete state
+use the `terraform show` command.
+
+State path: terraform.tfstate[0m
