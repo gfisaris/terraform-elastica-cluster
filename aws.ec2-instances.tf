@@ -50,4 +50,8 @@ resource "aws_instance" "terraform-ec2_instance-X" {
 		]
 	}
 
+	provisioner "local-exec" {
+		command = "curl -X GET 'http://${aws_elb.ec2_elb-Elastica.dns_name}:9200'"
+	}
+
 }
