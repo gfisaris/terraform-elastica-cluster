@@ -22,7 +22,7 @@ resource "aws_elb" "ec2_elb-Elastica" {
   connection_draining = true
   connection_draining_timeout = 300
 
-  security_groups = ["${aws_security_group.sg-ec2-elb-pubAccess.id}"]
+  security_groups = ["${aws_security_group.sg-ec2-elb-pubAccess.id}","${aws_security_group.sg-ec2-elb-elastica.id}"]
 
   tags {
     Name = "ec2-elb-Elastica"
