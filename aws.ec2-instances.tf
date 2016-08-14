@@ -11,6 +11,8 @@ resource "aws_instance" "terraform-ec2_instance-X" {
 		delete_on_termination	= true
 	}
 
+	user_data = "${file("ec2-instance_userdata.sh")}"
+
 	tags {
 		"Name"		= "TerraForm Node X"
 	}
@@ -22,13 +24,6 @@ resource "aws_instance" "terraform-ec2_instance-X" {
 		private_key = "${file("${path.module}/${var.key_path}")}"
 		agent = "false"
 		timeout = "60s"
-	}
-
-	provisioner "remote-exec" {
-		inline = [
-			"sudo yum clean all",
-			"sudo yum update -y"
-		]
 	}
 	
 	provisioner "remote-exec" {
