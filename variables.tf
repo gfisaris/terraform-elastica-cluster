@@ -14,3 +14,8 @@ variable "aws_region" {
 variable "key_path" {
     description = "Path to the private portion of the SSH key specified."
 }
+
+variable "myip_cidr_block" {
+    description = "Your CIDR from which you wish to access the ElasticSearch Cluster."
+    default = "0.0.0.0/0"
+}
