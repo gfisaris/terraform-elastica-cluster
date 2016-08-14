@@ -11,12 +11,12 @@ variable "aws_region" {
     default = "eu-west-1"
 }
 
-variable "key_name" {
-    description = "Name of the SSH keypair to use in AWS."
+variable "key_path" {
+    description = "Path to the private portion of the SSH Key that will be used"
 }
 
-variable "key_path" {
-    description = "Path to the private portion of the SSH key specified."
+variable "keypub_path" {
+    description = "Path to the public portion of the SSH Key that will be used"
 }
 
 variable "myip_cidr_block" {
