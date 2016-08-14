@@ -5,7 +5,7 @@ resource "aws_security_group" "sg-ec2-instances-elastica" {
 	ingress {
 		from_port = 9200
 		to_port = 9200
-		protocol = "http"
+		protocol = "tcp"
 		security_groups = ["${aws_security_group.sg-ec2-elb-elastica.id}"]
 	}
 
