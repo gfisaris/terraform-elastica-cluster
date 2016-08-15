@@ -6,6 +6,8 @@ resource "aws_instance" "terraform-ec2_instance-X" {
 	key_name		= "${aws_key_pair.elasticaEC2Admin.key_name}"
 	vpc_security_group_ids	= ["${aws_security_group.sg-ec2-instances-elastica.id}"]
 
+	iam_instance_profile	= "${aws_iam_instance_profile.es-ec2instance.id}"
+
 	root_block_device {
 		volume_type		= "gp2"
 		volume_size		= "${var.volume_root_size}"
