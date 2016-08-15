@@ -36094,3 +36094,588 @@ infrastructure, so keep it safe. To inspect the complete state
 use the `terraform show` command.
 
 State path: terraform.tfstate[0m
+There are warnings and/or errors related to your configuration. Please
+fix these before continuing.
+
+[33mWarnings:
+[0m[0m
+[33m  * template_file.elastica-cluster: using template_file as a resource is deprecated; consider using the data source instead[0m[0m
+[33m
+No errors found. Continuing with 1 warning(s).
+[0m[0m
+[0m[1maws_key_pair.elasticaEC2Admin: Refreshing state... (ID: elasticaEC2Admin)[0m
+[0m[1maws_security_group.sg-ec2-elb-elastica: Refreshing state... (ID: sg-ffe3c098)[0m
+[0m[1maws_security_group.sg-ec2-elb-pubAccess: Refreshing state... (ID: sg-f0e3c097)[0m
+[0m[1maws_security_group.sg-ec2-instances-elastica: Refreshing state... (ID: sg-fde3c09a)[0m
+[0m[1mtemplate_file.elastica-cluster: Refreshing state... (ID: 6bb8f8adc43e1fd0bd3d6a8035704fcfc130178fca6438734b0221ad6bf112eb)[0m
+[0m[1maws_instance.terraform-ec2_instance-X.0: Refreshing state... (ID: i-0cee70238367ab7b3)[0m
+[0m[1maws_instance.terraform-ec2_instance-X.2: Refreshing state... (ID: i-0dce7d6a423b7a8ea)[0m
+[0m[1maws_instance.terraform-ec2_instance-X.1: Refreshing state... (ID: i-088bf3070e053ccd0)[0m
+[0m[1maws_elb.ec2_elb-Elastica: Refreshing state... (ID: ec2-elb-Elastica)[0m
+[0m[1maws_elb.ec2_elb-Elastica: Destroying...[21m[0m
+[0m[1maws_elb.ec2_elb-Elastica: Destruction complete[21m[0m
+[0m[1maws_security_group.sg-ec2-elb-pubAccess: Destroying...[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.1: Destroying...[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.0: Destroying...[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.2: Destroying...[21m[0m
+[0m[1maws_security_group.sg-ec2-elb-pubAccess: Still destroying... (10s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.2: Still destroying... (10s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.1: Still destroying... (10s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.0: Still destroying... (10s elapsed)[21m[0m
+[0m[1maws_security_group.sg-ec2-elb-pubAccess: Still destroying... (20s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.0: Still destroying... (20s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.2: Still destroying... (20s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.1: Still destroying... (20s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.0: Destruction complete[21m[0m
+[0m[1maws_security_group.sg-ec2-elb-pubAccess: Still destroying... (30s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.1: Still destroying... (30s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.2: Still destroying... (30s elapsed)[21m[0m
+[0m[1maws_security_group.sg-ec2-elb-pubAccess: Still destroying... (40s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.2: Still destroying... (40s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.1: Still destroying... (40s elapsed)[21m[0m
+[0m[1maws_security_group.sg-ec2-elb-pubAccess: Still destroying... (50s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.1: Still destroying... (50s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.2: Still destroying... (50s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.1: Destruction complete[21m[0m
+[0m[1maws_security_group.sg-ec2-elb-pubAccess: Still destroying... (1m0s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.2: Still destroying... (1m0s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.2: Destruction complete[21m[0m
+[0m[1maws_key_pair.elasticaEC2Admin: Destroying...[21m[0m
+[0m[1mtemplate_file.elastica-cluster: Destroying...[21m[0m
+[0m[1mtemplate_file.elastica-cluster: Destruction complete[21m[0m
+[0m[1maws_security_group.sg-ec2-instances-elastica: Destroying...[21m[0m
+[0m[1maws_key_pair.elasticaEC2Admin: Destruction complete[21m[0m
+[0m[1maws_security_group.sg-ec2-instances-elastica: Destruction complete[21m[0m
+[0m[1maws_security_group.sg-ec2-elb-elastica: Destroying...[21m[0m
+[0m[1maws_security_group.sg-ec2-elb-elastica: Destruction complete[21m[0m
+[0m[1maws_security_group.sg-ec2-elb-pubAccess: Still destroying... (1m10s elapsed)[21m[0m
+[0m[1maws_security_group.sg-ec2-elb-pubAccess: Destruction complete[21m[0m
+[0m[1m[32m
+Apply complete! Resources: 0 added, 0 changed, 9 destroyed.[0m
+There are warnings and/or errors related to your configuration. Please
+fix these before continuing.
+
+[33mWarnings:
+[0m[0m
+[33m  * template_file.elastica-cluster: using template_file as a resource is deprecated; consider using the data source instead[0m[0m
+[33m
+No errors found. Continuing with 1 warning(s).
+[0m[0m
+Refreshing Terraform state in-memory prior to plan...
+The refreshed state will be used to calculate this plan, but
+will not be persisted to local or remote state storage.
+
+
+The Terraform execution plan has been generated and is shown below.
+Resources are shown in alphabetical order for quick scanning. Green resources
+will be created (or destroyed and then created if an existing resource
+exists), yellow resources are being changed in-place, and red resources
+will be destroyed. Cyan entries are data sources to be read.
+
+Note: You didn't specify an "-out" parameter to save this plan, so when
+"apply" is called, Terraform can't guarantee this is what will execute.
+
+[32m+ aws_elb.ec2_elb-Elastica
+[0m    availability_zones.#:                   "3"
+    availability_zones.1924028850:          "eu-west-1b"
+    availability_zones.3953592328:          "eu-west-1a"
+    availability_zones.94988580:            "eu-west-1c"
+    connection_draining:                    "true"
+    connection_draining_timeout:            "300"
+    cross_zone_load_balancing:              "true"
+    dns_name:                               "<computed>"
+    health_check.#:                         "1"
+    health_check.0.healthy_threshold:       "3"
+    health_check.0.interval:                "5"
+    health_check.0.target:                  "HTTP:9200/_cluster/health"
+    health_check.0.timeout:                 "2"
+    health_check.0.unhealthy_threshold:     "2"
+    idle_timeout:                           "300"
+    instances.#:                            "<computed>"
+    internal:                               "<computed>"
+    listener.#:                             "1"
+    listener.1661633718.instance_port:      "9200"
+    listener.1661633718.instance_protocol:  "http"
+    listener.1661633718.lb_port:            "9200"
+    listener.1661633718.lb_protocol:        "http"
+    listener.1661633718.ssl_certificate_id: ""
+    name:                                   "ec2-elb-Elastica"
+    security_groups.#:                      "<computed>"
+    source_security_group:                  "<computed>"
+    source_security_group_id:               "<computed>"
+    subnets.#:                              "<computed>"
+    tags.%:                                 "1"
+    tags.Name:                              "ec2-elb-Elastica"
+    zone_id:                                "<computed>"
+[0m
+[0m[32m+ aws_instance.terraform-ec2_instance-X.0
+[0m    ami:                                       "ami-7abd0209"
+    availability_zone:                         "<computed>"
+    ebs_block_device.#:                        "<computed>"
+    ephemeral_block_device.#:                  "<computed>"
+    instance_state:                            "<computed>"
+    instance_type:                             "t2.micro"
+    key_name:                                  "elasticaEC2Admin"
+    network_interface_id:                      "<computed>"
+    placement_group:                           "<computed>"
+    private_dns:                               "<computed>"
+    private_ip:                                "<computed>"
+    public_dns:                                "<computed>"
+    public_ip:                                 "<computed>"
+    root_block_device.#:                       "1"
+    root_block_device.0.delete_on_termination: "true"
+    root_block_device.0.iops:                  "<computed>"
+    root_block_device.0.volume_size:           "10"
+    root_block_device.0.volume_type:           "gp2"
+    security_groups.#:                         "<computed>"
+    source_dest_check:                         "true"
+    subnet_id:                                 "<computed>"
+    tags.%:                                    "1"
+    tags.Name:                                 "myElasticaCluster-node0"
+    tenancy:                                   "<computed>"
+    user_data:                                 "d12021c2e98b47bcb98b564bf50b97a56fe424b9"
+    vpc_security_group_ids.#:                  "<computed>"
+[0m
+[0m[32m+ aws_instance.terraform-ec2_instance-X.1
+[0m    ami:                                       "ami-7abd0209"
+    availability_zone:                         "<computed>"
+    ebs_block_device.#:                        "<computed>"
+    ephemeral_block_device.#:                  "<computed>"
+    instance_state:                            "<computed>"
+    instance_type:                             "t2.micro"
+    key_name:                                  "elasticaEC2Admin"
+    network_interface_id:                      "<computed>"
+    placement_group:                           "<computed>"
+    private_dns:                               "<computed>"
+    private_ip:                                "<computed>"
+    public_dns:                                "<computed>"
+    public_ip:                                 "<computed>"
+    root_block_device.#:                       "1"
+    root_block_device.0.delete_on_termination: "true"
+    root_block_device.0.iops:                  "<computed>"
+    root_block_device.0.volume_size:           "10"
+    root_block_device.0.volume_type:           "gp2"
+    security_groups.#:                         "<computed>"
+    source_dest_check:                         "true"
+    subnet_id:                                 "<computed>"
+    tags.%:                                    "1"
+    tags.Name:                                 "myElasticaCluster-node1"
+    tenancy:                                   "<computed>"
+    user_data:                                 "d12021c2e98b47bcb98b564bf50b97a56fe424b9"
+    vpc_security_group_ids.#:                  "<computed>"
+[0m
+[0m[32m+ aws_instance.terraform-ec2_instance-X.2
+[0m    ami:                                       "ami-7abd0209"
+    availability_zone:                         "<computed>"
+    ebs_block_device.#:                        "<computed>"
+    ephemeral_block_device.#:                  "<computed>"
+    instance_state:                            "<computed>"
+    instance_type:                             "t2.micro"
+    key_name:                                  "elasticaEC2Admin"
+    network_interface_id:                      "<computed>"
+    placement_group:                           "<computed>"
+    private_dns:                               "<computed>"
+    private_ip:                                "<computed>"
+    public_dns:                                "<computed>"
+    public_ip:                                 "<computed>"
+    root_block_device.#:                       "1"
+    root_block_device.0.delete_on_termination: "true"
+    root_block_device.0.iops:                  "<computed>"
+    root_block_device.0.volume_size:           "10"
+    root_block_device.0.volume_type:           "gp2"
+    security_groups.#:                         "<computed>"
+    source_dest_check:                         "true"
+    subnet_id:                                 "<computed>"
+    tags.%:                                    "1"
+    tags.Name:                                 "myElasticaCluster-node2"
+    tenancy:                                   "<computed>"
+    user_data:                                 "d12021c2e98b47bcb98b564bf50b97a56fe424b9"
+    vpc_security_group_ids.#:                  "<computed>"
+[0m
+[0m[32m+ aws_key_pair.elasticaEC2Admin
+[0m    fingerprint: "<computed>"
+    key_name:    "elasticaEC2Admin"
+    public_key:  "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCfmx/THkjaUzGybIiqupcamtVPF1y+jDXVP4I6mJVIteS8v4o37eN5uDpyf5WCd7ywKr43hwvjA72iRGIH1inV+kt6yGH1eDK5+Dy6yL8iJphRQKfLN9HShHrV34/p4I4OHJUm03+EwcGKN5AQqfTlT77U83YIYl8KGWAxwxFrj2Hy1UbNtH8QmbfNWPxNX4Nf2Te0RiP6RWjA/lFw+jxmUoaIKz26LNOt4+wQlksmJMqcMEYwUsJ+VnWmHWBf6nb1Q3emZWKQI4BFqFiWPdUC8BX+tqLM5ff/uW+oMjeYBFQRcyN1HB3PJ76eUvduwrDr9t0QFXkGQzaxse1p8QEx root@ip-172-31-31-115"
+[0m
+[0m[32m+ aws_security_group.sg-ec2-elb-elastica
+[0m    description: "Security Group attached to Elastica EC2 ELBs"
+    egress.#:    "<computed>"
+    ingress.#:   "<computed>"
+    name:        "VPC:SG:EC2:ELB:Elastica"
+    owner_id:    "<computed>"
+    vpc_id:      "<computed>"
+[0m
+[0m[32m+ aws_security_group.sg-ec2-elb-pubAccess
+[0m    description:                          "Control Public Access to EC2-ELB"
+    egress.#:                             "1"
+    egress.482069346.cidr_blocks.#:       "1"
+    egress.482069346.cidr_blocks.0:       "0.0.0.0/0"
+    egress.482069346.from_port:           "0"
+    egress.482069346.prefix_list_ids.#:   "0"
+    egress.482069346.protocol:            "-1"
+    egress.482069346.security_groups.#:   "0"
+    egress.482069346.self:                "false"
+    egress.482069346.to_port:             "0"
+    ingress.#:                            "1"
+    ingress.2500694996.cidr_blocks.#:     "1"
+    ingress.2500694996.cidr_blocks.0:     "0.0.0.0/0"
+    ingress.2500694996.from_port:         "9200"
+    ingress.2500694996.protocol:          "tcp"
+    ingress.2500694996.security_groups.#: "0"
+    ingress.2500694996.self:              "false"
+    ingress.2500694996.to_port:           "9200"
+    name:                                 "VPC:SG:EC2:ELB:PublicAccess"
+    owner_id:                             "<computed>"
+    vpc_id:                               "<computed>"
+[0m
+[0m[32m+ aws_security_group.sg-ec2-instances-elastica
+[0m    description:                           "Security Group attached to Elastica EC2 Instances"
+    egress.#:                              "6"
+    egress.1265039627.cidr_blocks.#:       "0"
+    egress.1265039627.from_port:           "9300"
+    egress.1265039627.prefix_list_ids.#:   "0"
+    egress.1265039627.protocol:            "tcp"
+    egress.1265039627.security_groups.#:   "0"
+    egress.1265039627.self:                "true"
+    egress.1265039627.to_port:             "9300"
+    egress.2040698479.cidr_blocks.#:       "0"
+    egress.2040698479.from_port:           "9200"
+    egress.2040698479.prefix_list_ids.#:   "0"
+    egress.2040698479.protocol:            "tcp"
+    egress.2040698479.security_groups.#:   "0"
+    egress.2040698479.self:                "true"
+    egress.2040698479.to_port:             "9200"
+    egress.2214680975.cidr_blocks.#:       "1"
+    egress.2214680975.cidr_blocks.0:       "0.0.0.0/0"
+    egress.2214680975.from_port:           "80"
+    egress.2214680975.prefix_list_ids.#:   "0"
+    egress.2214680975.protocol:            "tcp"
+    egress.2214680975.security_groups.#:   "0"
+    egress.2214680975.self:                "false"
+    egress.2214680975.to_port:             "80"
+    egress.2541437006.cidr_blocks.#:       "1"
+    egress.2541437006.cidr_blocks.0:       "0.0.0.0/0"
+    egress.2541437006.from_port:           "22"
+    egress.2541437006.prefix_list_ids.#:   "0"
+    egress.2541437006.protocol:            "tcp"
+    egress.2541437006.security_groups.#:   "0"
+    egress.2541437006.self:                "false"
+    egress.2541437006.to_port:             "22"
+    egress.2617001939.cidr_blocks.#:       "1"
+    egress.2617001939.cidr_blocks.0:       "0.0.0.0/0"
+    egress.2617001939.from_port:           "443"
+    egress.2617001939.prefix_list_ids.#:   "0"
+    egress.2617001939.protocol:            "tcp"
+    egress.2617001939.security_groups.#:   "0"
+    egress.2617001939.self:                "false"
+    egress.2617001939.to_port:             "443"
+    egress.~787292607.cidr_blocks.#:       "0"
+    egress.~787292607.from_port:           "9200"
+    egress.~787292607.prefix_list_ids.#:   "0"
+    egress.~787292607.protocol:            "tcp"
+    egress.~787292607.security_groups.#:   "<computed>"
+    egress.~787292607.self:                "false"
+    egress.~787292607.to_port:             "9200"
+    ingress.#:                             "3"
+    ingress.1265039627.cidr_blocks.#:      "0"
+    ingress.1265039627.from_port:          "9300"
+    ingress.1265039627.protocol:           "tcp"
+    ingress.1265039627.security_groups.#:  "0"
+    ingress.1265039627.self:               "true"
+    ingress.1265039627.to_port:            "9300"
+    ingress.2541437006.cidr_blocks.#:      "1"
+    ingress.2541437006.cidr_blocks.0:      "0.0.0.0/0"
+    ingress.2541437006.from_port:          "22"
+    ingress.2541437006.protocol:           "tcp"
+    ingress.2541437006.security_groups.#:  "0"
+    ingress.2541437006.self:               "false"
+    ingress.2541437006.to_port:            "22"
+    ingress.~2040698479.cidr_blocks.#:     "0"
+    ingress.~2040698479.from_port:         "9200"
+    ingress.~2040698479.protocol:          "tcp"
+    ingress.~2040698479.security_groups.#: "<computed>"
+    ingress.~2040698479.self:              "true"
+    ingress.~2040698479.to_port:           "9200"
+    name:                                  "VPC:SG:EC2:Instances:ElasticaNodes"
+    owner_id:                              "<computed>"
+    vpc_id:                                "<computed>"
+[0m
+[0m[32m+ template_file.elastica-cluster
+[0m    rendered: "<computed>"
+    template: "#!/bin/bash -v\n\nES_NODE_NAME=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)\nif [ -z \"$ES_NODE_NAME\" ]; then\n  ES_NODE_NAME=$(hostname)\nfi\n\nyum clean all\nyum update -y\n\nrpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm\nrpm -Uvh https://centos7.iuscommunity.org/ius-release.rpm\n\nyum -y install yum-priorities\nsed -i \"7i priority=10\" /etc/yum.repos.d/epel.repo\n\nyum -y update\n\nyum -y groupinstall 'Development Tools'\n\ntouch /etc/sysconfig/clock\necho \"ZONE=\\\"Europe/London\\\"\" >> /etc/sysconfig/clock\nln -sf /usr/share/zoneinfo/Europe/London /etc/localtime\n\nyum -y install ntp\nsystemctl enable ntpd.service\nsystemctl start ntpd.service\n\nyes | cp -f /etc/ntp.conf /etc/ntp.conf.original\nsed -i -e 's/0.centos.pool.ntp.org/time1.google.com/g' /etc/ntp.conf\nsed -i -e 's/1.centos.pool.ntp.org/time2.google.com/g' /etc/ntp.conf\nsed -i -e 's/2.centos.pool.ntp.org/time3.google.com/g' /etc/ntp.conf\nsed -i -e 's/3.centos.pool.ntp.org/time4.google.com/g' /etc/ntp.conf\nsystemctl restart ntpd.service\n\ndd if=/dev/zero of=/mnt/.swapfile bs=1M count=1024\nchown root:root /mnt/.swapfile\nchmod 600 /mnt/.swapfile\n\nmkswap /mnt/.swapfile\nswapon /mnt/.swapfile\nsh -c 'echo \"/mnt/.swapfile swap swap defaults 0 0\" >> /etc/fstab'\nswapon -a\n\nsed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config\nsetenforce 0\n\nyum install -y java-1.8.0-openjdk*\n\nrpm -Uvh https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/rpm/elasticsearch/2.3.5/elasticsearch-2.3.5.rpm\n\nsystemctl enable elasticsearch.service\nsystemctl start elasticsearch.service\n\nsudo yes|/usr/share/elasticsearch/bin/plugin install cloud-aws\nservice elasticsearch restart\n\n\ncat <<EOT >> /etc/elasticsearch/elasticsearch.yml\n#\n# ----------------------------- my Configurations -----------------------------\n#\n\n# ---------------------------------- Cluster -----------------------------------\n#\ncluster.name: ${es_cluster_name}\n#\n# ------------------------------------ Node ------------------------------------\n#\nnode.name: $ES_NODE_NAME\nnode.max_local_storage_nodes: 1\nnode.master: true\nnode.data: true\n\n#\n# --------------------------- Index/Shards/Replicas ----------------------------\n#\nindex.number_of_shards: ${es_cluster_number_of_shards}\nindex.number_of_replicas: ${es_cluster_number_of_replicas}\n#\n# ----------------------------------- Paths ------------------------------------\n#\npath.conf: /etc/elasticsearch\npath.logs: /var/log/elasticsearch\n#\n# ----------------------------------- Memory -----------------------------------\n#\nbootstrap.mlockall: true\n#\n# ---------------------------------- Network -----------------------------------\n#\nnetwork.host: _ec2:privateIpv4_\nhttp.port: 9200\n#\n# --------------------------------- Discovery ----------------------------------\n#\ndiscovery.zen.ping.multicast.enabled: false\ndiscovery.zen.minimum_master_nodes: ${es_cluster_minimum_master_nodes}\n#\n# ---------------------------------- Various -----------------------------------\n#\naction.destructive_requires_name: true\ncloud.node.auto_attributes: true\n#\n# -------------------------- Custom Configuration --------------------------\n#\ncloud.aws.region: ${aws_region}\ncloud.aws.access_key: ${aws_access_key}\ncloud.aws.secret_key: ${aws_secret_key}\ncluster.routing.allocation.awareness.attributes: aws_availability_zone\ncluster.routing.allocation.awareness.force.zone.values: [\"eu-west-1a\", \"eu-west-1b\", \"eu-west-1c\"]\ndiscovery.ec2.availability_zones: [\"eu-west-1a\", \"eu-west-1b\", \"eu-west-1c\"]\ndiscovery.ec2.groups: [\"${aws_vpc_security_groups}\"]\ndiscovery.ec2.host_type: private_ip\ndiscovery.ec2.ping_timeout: 3s\n \ndiscovery.ec2.tag.es_cluster: ${es_cluster_name}\n\ndiscovery.type: ec2\nplugin.madatory: cloud-aws\n\nEOT\n\nservice elasticsearch restart\n"
+    vars.%:   "<computed>"
+[0m
+[0m
+[0m[1mPlan:[0m 9 to add, 0 to change, 0 to destroy.[0m
+There are warnings and/or errors related to your configuration. Please
+fix these before continuing.
+
+[33mWarnings:
+[0m[0m
+[33m  * template_file.elastica-cluster: using template_file as a resource is deprecated; consider using the data source instead[0m[0m
+[33m
+No errors found. Continuing with 1 warning(s).
+[0m[0m
+[0m[1maws_key_pair.elasticaEC2Admin: Creating...[21m
+  fingerprint: "" => "<computed>"
+  key_name:    "" => "elasticaEC2Admin"
+  public_key:  "" => "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCfmx/THkjaUzGybIiqupcamtVPF1y+jDXVP4I6mJVIteS8v4o37eN5uDpyf5WCd7ywKr43hwvjA72iRGIH1inV+kt6yGH1eDK5+Dy6yL8iJphRQKfLN9HShHrV34/p4I4OHJUm03+EwcGKN5AQqfTlT77U83YIYl8KGWAxwxFrj2Hy1UbNtH8QmbfNWPxNX4Nf2Te0RiP6RWjA/lFw+jxmUoaIKz26LNOt4+wQlksmJMqcMEYwUsJ+VnWmHWBf6nb1Q3emZWKQI4BFqFiWPdUC8BX+tqLM5ff/uW+oMjeYBFQRcyN1HB3PJ76eUvduwrDr9t0QFXkGQzaxse1p8QEx root@ip-172-31-31-115"[0m
+[0m[1maws_security_group.sg-ec2-elb-elastica: Creating...[21m
+  description: "" => "Security Group attached to Elastica EC2 ELBs"
+  egress.#:    "" => "<computed>"
+  ingress.#:   "" => "<computed>"
+  name:        "" => "VPC:SG:EC2:ELB:Elastica"
+  owner_id:    "" => "<computed>"
+  vpc_id:      "" => "<computed>"[0m
+[0m[1maws_security_group.sg-ec2-elb-pubAccess: Creating...[21m
+  description:                          "" => "Control Public Access to EC2-ELB"
+  egress.#:                             "" => "1"
+  egress.482069346.cidr_blocks.#:       "" => "1"
+  egress.482069346.cidr_blocks.0:       "" => "0.0.0.0/0"
+  egress.482069346.from_port:           "" => "0"
+  egress.482069346.prefix_list_ids.#:   "" => "0"
+  egress.482069346.protocol:            "" => "-1"
+  egress.482069346.security_groups.#:   "" => "0"
+  egress.482069346.self:                "" => "false"
+  egress.482069346.to_port:             "" => "0"
+  ingress.#:                            "" => "1"
+  ingress.2500694996.cidr_blocks.#:     "" => "1"
+  ingress.2500694996.cidr_blocks.0:     "" => "0.0.0.0/0"
+  ingress.2500694996.from_port:         "" => "9200"
+  ingress.2500694996.protocol:          "" => "tcp"
+  ingress.2500694996.security_groups.#: "" => "0"
+  ingress.2500694996.self:              "" => "false"
+  ingress.2500694996.to_port:           "" => "9200"
+  name:                                 "" => "VPC:SG:EC2:ELB:PublicAccess"
+  owner_id:                             "" => "<computed>"
+  vpc_id:                               "" => "<computed>"[0m
+[0m[1maws_key_pair.elasticaEC2Admin: Creation complete[21m[0m
+[0m[1maws_security_group.sg-ec2-elb-elastica: Creation complete[21m[0m
+[0m[1maws_security_group.sg-ec2-instances-elastica: Creating...[21m
+  description:                                   "" => "Security Group attached to Elastica EC2 Instances"
+  egress.#:                                      "" => "6"
+  egress.1265039627.cidr_blocks.#:               "" => "0"
+  egress.1265039627.from_port:                   "" => "9300"
+  egress.1265039627.prefix_list_ids.#:           "" => "0"
+  egress.1265039627.protocol:                    "" => "tcp"
+  egress.1265039627.security_groups.#:           "" => "0"
+  egress.1265039627.self:                        "" => "true"
+  egress.1265039627.to_port:                     "" => "9300"
+  egress.2040698479.cidr_blocks.#:               "" => "0"
+  egress.2040698479.from_port:                   "" => "9200"
+  egress.2040698479.prefix_list_ids.#:           "" => "0"
+  egress.2040698479.protocol:                    "" => "tcp"
+  egress.2040698479.security_groups.#:           "" => "0"
+  egress.2040698479.self:                        "" => "true"
+  egress.2040698479.to_port:                     "" => "9200"
+  egress.2214680975.cidr_blocks.#:               "" => "1"
+  egress.2214680975.cidr_blocks.0:               "" => "0.0.0.0/0"
+  egress.2214680975.from_port:                   "" => "80"
+  egress.2214680975.prefix_list_ids.#:           "" => "0"
+  egress.2214680975.protocol:                    "" => "tcp"
+  egress.2214680975.security_groups.#:           "" => "0"
+  egress.2214680975.self:                        "" => "false"
+  egress.2214680975.to_port:                     "" => "80"
+  egress.2541437006.cidr_blocks.#:               "" => "1"
+  egress.2541437006.cidr_blocks.0:               "" => "0.0.0.0/0"
+  egress.2541437006.from_port:                   "" => "22"
+  egress.2541437006.prefix_list_ids.#:           "" => "0"
+  egress.2541437006.protocol:                    "" => "tcp"
+  egress.2541437006.security_groups.#:           "" => "0"
+  egress.2541437006.self:                        "" => "false"
+  egress.2541437006.to_port:                     "" => "22"
+  egress.2617001939.cidr_blocks.#:               "" => "1"
+  egress.2617001939.cidr_blocks.0:               "" => "0.0.0.0/0"
+  egress.2617001939.from_port:                   "" => "443"
+  egress.2617001939.prefix_list_ids.#:           "" => "0"
+  egress.2617001939.protocol:                    "" => "tcp"
+  egress.2617001939.security_groups.#:           "" => "0"
+  egress.2617001939.self:                        "" => "false"
+  egress.2617001939.to_port:                     "" => "443"
+  egress.3735564358.cidr_blocks.#:               "" => "0"
+  egress.3735564358.from_port:                   "" => "9200"
+  egress.3735564358.prefix_list_ids.#:           "" => "0"
+  egress.3735564358.protocol:                    "" => "tcp"
+  egress.3735564358.security_groups.#:           "" => "1"
+  egress.3735564358.security_groups.1470957461:  "" => "sg-9ce8cbfb"
+  egress.3735564358.self:                        "" => "false"
+  egress.3735564358.to_port:                     "" => "9200"
+  ingress.#:                                     "" => "3"
+  ingress.1265039627.cidr_blocks.#:              "" => "0"
+  ingress.1265039627.from_port:                  "" => "9300"
+  ingress.1265039627.protocol:                   "" => "tcp"
+  ingress.1265039627.security_groups.#:          "" => "0"
+  ingress.1265039627.self:                       "" => "true"
+  ingress.1265039627.to_port:                    "" => "9300"
+  ingress.2368085560.cidr_blocks.#:              "" => "0"
+  ingress.2368085560.from_port:                  "" => "9200"
+  ingress.2368085560.protocol:                   "" => "tcp"
+  ingress.2368085560.security_groups.#:          "" => "1"
+  ingress.2368085560.security_groups.1470957461: "" => "sg-9ce8cbfb"
+  ingress.2368085560.self:                       "" => "true"
+  ingress.2368085560.to_port:                    "" => "9200"
+  ingress.2541437006.cidr_blocks.#:              "" => "1"
+  ingress.2541437006.cidr_blocks.0:              "" => "0.0.0.0/0"
+  ingress.2541437006.from_port:                  "" => "22"
+  ingress.2541437006.protocol:                   "" => "tcp"
+  ingress.2541437006.security_groups.#:          "" => "0"
+  ingress.2541437006.self:                       "" => "false"
+  ingress.2541437006.to_port:                    "" => "22"
+  name:                                          "" => "VPC:SG:EC2:Instances:ElasticaNodes"
+  owner_id:                                      "" => "<computed>"
+  vpc_id:                                        "" => "<computed>"[0m
+[0m[1maws_security_group.sg-ec2-elb-pubAccess: Creation complete[21m[0m
+[0m[1maws_security_group.sg-ec2-instances-elastica: Creation complete[21m[0m
+[0m[1mtemplate_file.elastica-cluster: Creating...[21m
+  rendered:                             "" => "<computed>"
+  template:                             "" => "#!/bin/bash -v\n\nES_NODE_NAME=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)\nif [ -z \"$ES_NODE_NAME\" ]; then\n  ES_NODE_NAME=$(hostname)\nfi\n\nyum clean all\nyum update -y\n\nrpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm\nrpm -Uvh https://centos7.iuscommunity.org/ius-release.rpm\n\nyum -y install yum-priorities\nsed -i \"7i priority=10\" /etc/yum.repos.d/epel.repo\n\nyum -y update\n\nyum -y groupinstall 'Development Tools'\n\ntouch /etc/sysconfig/clock\necho \"ZONE=\\\"Europe/London\\\"\" >> /etc/sysconfig/clock\nln -sf /usr/share/zoneinfo/Europe/London /etc/localtime\n\nyum -y install ntp\nsystemctl enable ntpd.service\nsystemctl start ntpd.service\n\nyes | cp -f /etc/ntp.conf /etc/ntp.conf.original\nsed -i -e 's/0.centos.pool.ntp.org/time1.google.com/g' /etc/ntp.conf\nsed -i -e 's/1.centos.pool.ntp.org/time2.google.com/g' /etc/ntp.conf\nsed -i -e 's/2.centos.pool.ntp.org/time3.google.com/g' /etc/ntp.conf\nsed -i -e 's/3.centos.pool.ntp.org/time4.google.com/g' /etc/ntp.conf\nsystemctl restart ntpd.service\n\ndd if=/dev/zero of=/mnt/.swapfile bs=1M count=1024\nchown root:root /mnt/.swapfile\nchmod 600 /mnt/.swapfile\n\nmkswap /mnt/.swapfile\nswapon /mnt/.swapfile\nsh -c 'echo \"/mnt/.swapfile swap swap defaults 0 0\" >> /etc/fstab'\nswapon -a\n\nsed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config\nsetenforce 0\n\nyum install -y java-1.8.0-openjdk*\n\nrpm -Uvh https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/rpm/elasticsearch/2.3.5/elasticsearch-2.3.5.rpm\n\nsystemctl enable elasticsearch.service\nsystemctl start elasticsearch.service\n\nsudo yes|/usr/share/elasticsearch/bin/plugin install cloud-aws\nservice elasticsearch restart\n\n\ncat <<EOT >> /etc/elasticsearch/elasticsearch.yml\n#\n# ----------------------------- my Configurations -----------------------------\n#\n\n# ---------------------------------- Cluster -----------------------------------\n#\ncluster.name: ${es_cluster_name}\n#\n# ------------------------------------ Node ------------------------------------\n#\nnode.name: $ES_NODE_NAME\nnode.max_local_storage_nodes: 1\nnode.master: true\nnode.data: true\n\n#\n# --------------------------- Index/Shards/Replicas ----------------------------\n#\nindex.number_of_shards: ${es_cluster_number_of_shards}\nindex.number_of_replicas: ${es_cluster_number_of_replicas}\n#\n# ----------------------------------- Paths ------------------------------------\n#\npath.conf: /etc/elasticsearch\npath.logs: /var/log/elasticsearch\n#\n# ----------------------------------- Memory -----------------------------------\n#\nbootstrap.mlockall: true\n#\n# ---------------------------------- Network -----------------------------------\n#\nnetwork.host: _ec2:privateIpv4_\nhttp.port: 9200\n#\n# --------------------------------- Discovery ----------------------------------\n#\ndiscovery.zen.ping.multicast.enabled: false\ndiscovery.zen.minimum_master_nodes: ${es_cluster_minimum_master_nodes}\n#\n# ---------------------------------- Various -----------------------------------\n#\naction.destructive_requires_name: true\ncloud.node.auto_attributes: true\n#\n# -------------------------- Custom Configuration --------------------------\n#\ncloud.aws.region: ${aws_region}\ncloud.aws.access_key: ${aws_access_key}\ncloud.aws.secret_key: ${aws_secret_key}\ncluster.routing.allocation.awareness.attributes: aws_availability_zone\ncluster.routing.allocation.awareness.force.zone.values: [\"eu-west-1a\", \"eu-west-1b\", \"eu-west-1c\"]\ndiscovery.ec2.availability_zones: [\"eu-west-1a\", \"eu-west-1b\", \"eu-west-1c\"]\ndiscovery.ec2.groups: [\"${aws_vpc_security_groups}\"]\ndiscovery.ec2.host_type: private_ip\ndiscovery.ec2.ping_timeout: 3s\n \ndiscovery.ec2.tag.es_cluster: ${es_cluster_name}\n\ndiscovery.type: ec2\nplugin.madatory: cloud-aws\n\nEOT\n\nservice elasticsearch restart\n"
+  vars.%:                               "" => "8"
+  vars.aws_access_key:                  "" => "AKIAJ2RZBLMAZE7YSTDQ"
+  vars.aws_region:                      "" => "eu-west-1"
+  vars.aws_secret_key:                  "" => "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"
+  vars.aws_vpc_security_groups:         "" => "sg-9ae8cbfd"
+  vars.es_cluster_minimum_master_nodes: "" => "2"
+  vars.es_cluster_name:                 "" => "myElasticaCluster"
+  vars.es_cluster_number_of_replicas:   "" => "2"
+  vars.es_cluster_number_of_shards:     "" => "5"[0m
+[0m[1mtemplate_file.elastica-cluster: Creation complete[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.2: Creating...[21m
+  ami:                                       "" => "ami-7abd0209"
+  availability_zone:                         "" => "<computed>"
+  ebs_block_device.#:                        "" => "<computed>"
+  ephemeral_block_device.#:                  "" => "<computed>"
+  instance_state:                            "" => "<computed>"
+  instance_type:                             "" => "t2.micro"
+  key_name:                                  "" => "elasticaEC2Admin"
+  network_interface_id:                      "" => "<computed>"
+  placement_group:                           "" => "<computed>"
+  private_dns:                               "" => "<computed>"
+  private_ip:                                "" => "<computed>"
+  public_dns:                                "" => "<computed>"
+  public_ip:                                 "" => "<computed>"
+  root_block_device.#:                       "" => "1"
+  root_block_device.0.delete_on_termination: "" => "true"
+  root_block_device.0.iops:                  "" => "<computed>"
+  root_block_device.0.volume_size:           "" => "10"
+  root_block_device.0.volume_type:           "" => "gp2"
+  security_groups.#:                         "" => "<computed>"
+  source_dest_check:                         "" => "true"
+  subnet_id:                                 "" => "<computed>"
+  tags.%:                                    "" => "1"
+  tags.Name:                                 "" => "myElasticaCluster-node2"
+  tenancy:                                   "" => "<computed>"
+  user_data:                                 "" => "954090171e0c50709ed76198e27a5c4caf779420"
+  vpc_security_group_ids.#:                  "" => "1"
+  vpc_security_group_ids.693220233:          "" => "sg-9ae8cbfd"[0m
+[0m[1maws_instance.terraform-ec2_instance-X.1: Creating...[21m
+  ami:                                       "" => "ami-7abd0209"
+  availability_zone:                         "" => "<computed>"
+  ebs_block_device.#:                        "" => "<computed>"
+  ephemeral_block_device.#:                  "" => "<computed>"
+  instance_state:                            "" => "<computed>"
+  instance_type:                             "" => "t2.micro"
+  key_name:                                  "" => "elasticaEC2Admin"
+  network_interface_id:                      "" => "<computed>"
+  placement_group:                           "" => "<computed>"
+  private_dns:                               "" => "<computed>"
+  private_ip:                                "" => "<computed>"
+  public_dns:                                "" => "<computed>"
+  public_ip:                                 "" => "<computed>"
+  root_block_device.#:                       "" => "1"
+  root_block_device.0.delete_on_termination: "" => "true"
+  root_block_device.0.iops:                  "" => "<computed>"
+  root_block_device.0.volume_size:           "" => "10"
+  root_block_device.0.volume_type:           "" => "gp2"
+  security_groups.#:                         "" => "<computed>"
+  source_dest_check:                         "" => "true"
+  subnet_id:                                 "" => "<computed>"
+  tags.%:                                    "" => "1"
+  tags.Name:                                 "" => "myElasticaCluster-node1"
+  tenancy:                                   "" => "<computed>"
+  user_data:                                 "" => "954090171e0c50709ed76198e27a5c4caf779420"
+  vpc_security_group_ids.#:                  "" => "1"
+  vpc_security_group_ids.693220233:          "" => "sg-9ae8cbfd"[0m
+[0m[1maws_instance.terraform-ec2_instance-X.0: Creating...[21m
+  ami:                                       "" => "ami-7abd0209"
+  availability_zone:                         "" => "<computed>"
+  ebs_block_device.#:                        "" => "<computed>"
+  ephemeral_block_device.#:                  "" => "<computed>"
+  instance_state:                            "" => "<computed>"
+  instance_type:                             "" => "t2.micro"
+  key_name:                                  "" => "elasticaEC2Admin"
+  network_interface_id:                      "" => "<computed>"
+  placement_group:                           "" => "<computed>"
+  private_dns:                               "" => "<computed>"
+  private_ip:                                "" => "<computed>"
+  public_dns:                                "" => "<computed>"
+  public_ip:                                 "" => "<computed>"
+  root_block_device.#:                       "" => "1"
+  root_block_device.0.delete_on_termination: "" => "true"
+  root_block_device.0.iops:                  "" => "<computed>"
+  root_block_device.0.volume_size:           "" => "10"
+  root_block_device.0.volume_type:           "" => "gp2"
+  security_groups.#:                         "" => "<computed>"
+  source_dest_check:                         "" => "true"
+  subnet_id:                                 "" => "<computed>"
+  tags.%:                                    "" => "1"
+  tags.Name:                                 "" => "myElasticaCluster-node0"
+  tenancy:                                   "" => "<computed>"
+  user_data:                                 "" => "954090171e0c50709ed76198e27a5c4caf779420"
+  vpc_security_group_ids.#:                  "" => "1"
+  vpc_security_group_ids.693220233:          "" => "sg-9ae8cbfd"[0m
+[0m[1maws_instance.terraform-ec2_instance-X.2: Still creating... (10s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.1: Still creating... (10s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.0: Still creating... (10s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.2: Still creating... (20s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.1: Still creating... (20s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.0: Still creating... (20s elapsed)[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.0: Creation complete[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.2: Creation complete[21m[0m
+[0m[1maws_instance.terraform-ec2_instance-X.1: Creation complete[21m[0m
+[0m[1maws_elb.ec2_elb-Elastica: Creating...[21m
+  availability_zones.#:                   "" => "3"
+  availability_zones.1924028850:          "" => "eu-west-1b"
+  availability_zones.3953592328:          "" => "eu-west-1a"
+  availability_zones.94988580:            "" => "eu-west-1c"
+  connection_draining:                    "" => "true"
+  connection_draining_timeout:            "" => "300"
+  cross_zone_load_balancing:              "" => "true"
+  dns_name:                               "" => "<computed>"
+  health_check.#:                         "" => "1"
+  health_check.0.healthy_threshold:       "" => "3"
+  health_check.0.interval:                "" => "5"
+  health_check.0.target:                  "" => "HTTP:9200/_cluster/health"
+  health_check.0.timeout:                 "" => "2"
+  health_check.0.unhealthy_threshold:     "" => "2"
+  idle_timeout:                           "" => "300"
+  instances.#:                            "" => "3"
+  instances.1733849368:                   "" => "i-08e93f3f237635be3"
+  instances.2294895246:                   "" => "i-046c2635b50a72099"
+  instances.470240746:                    "" => "i-0acf511ac0d6ef69a"
+  internal:                               "" => "<computed>"
+  listener.#:                             "" => "1"
+  listener.1661633718.instance_port:      "" => "9200"
+  listener.1661633718.instance_protocol:  "" => "http"
+  listener.1661633718.lb_port:            "" => "9200"
+  listener.1661633718.lb_protocol:        "" => "http"
+  listener.1661633718.ssl_certificate_id: "" => ""
+  name:                                   "" => "ec2-elb-Elastica"
+  security_groups.#:                      "" => "2"
+  security_groups.1470957461:             "" => "sg-9ce8cbfb"
+  security_groups.2262645943:             "" => "sg-9be8cbfc"
+  source_security_group:                  "" => "<computed>"
+  source_security_group_id:               "" => "<computed>"
+  subnets.#:                              "" => "<computed>"
+  tags.%:                                 "" => "1"
+  tags.Name:                              "" => "ec2-elb-Elastica"
+  zone_id:                                "" => "<computed>"[0m
+[0m[1maws_elb.ec2_elb-Elastica: Creation complete[21m[0m
+[0m[1m[32m
+Apply complete! Resources: 9 added, 0 changed, 0 destroyed.[0m
+[0m
+The state of your infrastructure has been saved to the path
+below. This state is required to modify and destroy your
+infrastructure, so keep it safe. To inspect the complete state
+use the `terraform show` command.
+
+State path: terraform.tfstate[0m
