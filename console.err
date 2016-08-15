@@ -1,0 +1,695 @@
+Error loading config: Error loading /home/gfisaris/myTerraformProjects/terraform-elastica-cluster/aws.ec2-instances.tf: Error reading config for aws_instance[terraform-ec2_instance-X]: aws_key_pair.gfisaris_key_name: resource variables must be three parts: TYPE.NAME.ATTR in:
+
+${aws_key_pair.gfisaris_key_name}
+
+
+[31minvalid value "ssh_key_path=.ssh/id_rsa" for flag -var: Cannot parse value for variable ssh_key_path ("ssh_key_path=.ssh/id_rsa") as valid HCL: At 1:14: Unknown token: 1:14 PERIOD .[0m[0m
+[31mUsage: terraform plan [options] [dir]
+
+  Generates an execution plan for Terraform.
+
+  This execution plan can be reviewed prior to running apply to get a
+  sense for what Terraform will do. Optionally, the plan can be saved to
+  a Terraform plan file, and apply can take this plan file to execute
+  this plan exactly.
+
+Options:
+
+  -destroy            If set, a plan will be generated to destroy all resources
+                      managed by the given configuration and state.
+
+  -detailed-exitcode  Return detailed exit codes when the command exits. This
+                      will change the meaning of exit codes to:
+                      0 - Succeeded, diff is empty (no changes)
+                      1 - Errored
+                      2 - Succeeded, there is a diff
+
+  -input=true         Ask for input for variables if not directly set.
+
+  -module-depth=n     Specifies the depth of modules to show in the output.
+                      This does not affect the plan itself, only the output
+                      shown. By default, this is -1, which will expand all.
+
+  -no-color           If specified, output won't contain any color.
+
+  -out=path           Write a plan file to the given path. This can be used as
+                      input to the "apply" command.
+
+  -parallelism=n      Limit the number of concurrent operations. Defaults to 10.
+
+  -refresh=true       Update state prior to checking for differences.
+
+  -state=statefile    Path to a Terraform state file to use to look
+                      up Terraform-managed resources. By default it will
+                      use the state "terraform.tfstate" if it exists.
+
+  -target=resource    Resource to target. Operation will be limited to this
+                      resource and its dependencies. This flag can be used
+                      multiple times.
+
+  -var 'foo=bar'      Set a variable in the Terraform configuration. This
+                      flag can be set multiple times.
+
+  -var-file=foo       Set variables in the Terraform configuration from
+                      a file. If "terraform.tfvars" is present, it will be
+                      automatically loaded if this flag is not specified.[0m[0m
+[31mTwo interrupts received. Exiting immediately. Note that data
+loss may have occurred.[0m[0m
+[31mError asking for confirmation: interrupted[0m[0m
+[31mflag provided but not defined: -v-force[0m[0m
+[31mUsage: terraform destroy [options] [DIR]
+
+  Destroy Terraform-managed infrastructure.
+
+Options:
+
+  -backup=path           Path to backup the existing state file before
+                         modifying. Defaults to the "-state-out" path with
+                         ".backup" extension. Set to "-" to disable backup.
+
+  -force                 Don't ask for input for destroy confirmation.
+
+  -no-color              If specified, output won't contain any color.
+
+  -parallelism=n         Limit the number of concurrent operations.
+                         Defaults to 10.
+
+  -refresh=true          Update state prior to checking for differences. This
+                         has no effect if a plan file is given to apply.
+
+  -state=path            Path to read and save state (unless state-out
+                         is specified). Defaults to "terraform.tfstate".
+
+  -state-out=path        Path to write state to that is different than
+                         "-state". This can be used to preserve the old
+                         state.
+
+  -target=resource       Resource to target. Operation will be limited to this
+                         resource and its dependencies. This flag can be used
+                         multiple times.
+
+  -var 'foo=bar'         Set a variable in the Terraform configuration. This
+                         flag can be set multiple times.
+
+  -var-file=foo          Set variables in the Terraform configuration from
+                         a file. If "terraform.tfvars" is present, it will be
+                         automatically loaded if this flag is not specified.[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* aws_security_group.terraform-sg-ec2-pubAccess: DependencyViolation: resource sg-5b02233c has a dependent object
+	status code: 400, request id: 770b669b-ce3a-49cc-a11e-aaac7992c187
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mTwo interrupts received. Exiting immediately. Note that data
+loss may have occurred.[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* dial tcp 52.19.191.37:22: i/o timeout
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* ssh: handshake failed: ssh: unable to authenticate, attempted methods [publickey none], no supported methods remain
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* ssh: handshake failed: ssh: unable to authenticate, attempted methods [none publickey], no supported methods remain
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* ssh: handshake failed: ssh: unable to authenticate, attempted methods [none], no supported methods remain
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* ssh: handshake failed: ssh: unable to authenticate, attempted methods [none], no supported methods remain
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* ssh: handshake failed: ssh: unable to authenticate, attempted methods [none], no supported methods remain
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mErrors:
+[0m[0m
+[31m  * 1 error(s) occurred:
+
+* Required variable not set: key_path[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* file: open : no such file or directory in:
+
+${file("${var.key_path}")}
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* file: open : no such file or directory in:
+
+${file("${var.key_path}")}
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* ssh: handshake failed: ssh: unable to authenticate, attempted methods [none], no supported methods remain
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* file: open /home/gfisaris/myTerraformProjects/terraform-elastica-cluster/{var.key_path}: no such file or directory in:
+
+${file("${path.module}/{var.key_path}")}
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31minvalid value "key_path=.ssh/id_rsa" for flag -var: Cannot parse value for variable key_path ("key_path=.ssh/id_rsa") as valid HCL: At 1:10: Unknown token: 1:10 PERIOD .[0m[0m
+[31mUsage: terraform apply [options] [DIR-OR-PLAN]
+
+  Builds or changes infrastructure according to Terraform configuration
+  files in DIR.
+
+  By default, apply scans the current directory for the configuration
+  and applies the changes appropriately. However, a path to another
+  configuration or an execution plan can be provided. Execution plans can be
+  used to only execute a pre-determined set of actions.
+
+  DIR can also be a SOURCE as given to the "init" command. In this case,
+  apply behaves as though "init" was called followed by "apply". This only
+  works for sources that aren't files, and only if the current working
+  directory is empty of Terraform files. This is a shortcut for getting
+  started.
+
+Options:
+
+  -backup=path           Path to backup the existing state file before
+                         modifying. Defaults to the "-state-out" path with
+                         ".backup" extension. Set to "-" to disable backup.
+
+  -input=true            Ask for input for variables if not directly set.
+
+  -no-color              If specified, output won't contain any color.
+
+  -parallelism=n         Limit the number of concurrent operations.
+                         Defaults to 10.
+
+  -refresh=true          Update state prior to checking for differences. This
+                         has no effect if a plan file is given to apply.
+
+  -state=path            Path to read and save state (unless state-out
+                         is specified). Defaults to "terraform.tfstate".
+
+  -state-out=path        Path to write state to that is different than
+                         "-state". This can be used to preserve the old
+                         state.
+
+  -target=resource       Resource to target. Operation will be limited to this
+                         resource and its dependencies. This flag can be used
+                         multiple times.
+
+  -var 'foo=bar'         Set a variable in the Terraform configuration. This
+                         flag can be set multiple times.
+
+  -var-file=foo          Set variables in the Terraform configuration from
+                         a file. If "terraform.tfvars" is present, it will be
+                         automatically loaded if this flag is not specified.[0m[0m
+[31mErrors:
+[0m[0m
+[31m  * aws_elb_attachment.elastica-elb_attach-ec2_instace-X: instance must be a single value, not a list[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* aws_security_group.sg-ec2-instances-elastica: Error authorizing security group ingress rules: InvalidParameterValue: Invalid value 'http' for IP protocol. Unknown protocol.
+	status code: 400, request id: 0af74bda-a876-4f09-92c8-4d2e2c1b1d36
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31minvalid value "myip_cidr_block=2.31.200.46/32" for flag -var: Cannot parse value for variable myip_cidr_block ("myip_cidr_block=2.31.200.46/32") as valid HCL: At 1:21: expected: IDENT | STRING | ASSIGN | LBRACE got: FLOAT[0m[0m
+[31mUsage: terraform plan [options] [dir]
+
+  Generates an execution plan for Terraform.
+
+  This execution plan can be reviewed prior to running apply to get a
+  sense for what Terraform will do. Optionally, the plan can be saved to
+  a Terraform plan file, and apply can take this plan file to execute
+  this plan exactly.
+
+Options:
+
+  -destroy            If set, a plan will be generated to destroy all resources
+                      managed by the given configuration and state.
+
+  -detailed-exitcode  Return detailed exit codes when the command exits. This
+                      will change the meaning of exit codes to:
+                      0 - Succeeded, diff is empty (no changes)
+                      1 - Errored
+                      2 - Succeeded, there is a diff
+
+  -input=true         Ask for input for variables if not directly set.
+
+  -module-depth=n     Specifies the depth of modules to show in the output.
+                      This does not affect the plan itself, only the output
+                      shown. By default, this is -1, which will expand all.
+
+  -no-color           If specified, output won't contain any color.
+
+  -out=path           Write a plan file to the given path. This can be used as
+                      input to the "apply" command.
+
+  -parallelism=n      Limit the number of concurrent operations. Defaults to 10.
+
+  -refresh=true       Update state prior to checking for differences.
+
+  -state=statefile    Path to a Terraform state file to use to look
+                      up Terraform-managed resources. By default it will
+                      use the state "terraform.tfstate" if it exists.
+
+  -target=resource    Resource to target. Operation will be limited to this
+                      resource and its dependencies. This flag can be used
+                      multiple times.
+
+  -var 'foo=bar'      Set a variable in the Terraform configuration. This
+                      flag can be set multiple times.
+
+  -var-file=foo       Set variables in the Terraform configuration from
+                      a file. If "terraform.tfvars" is present, it will be
+                      automatically loaded if this flag is not specified.[0m[0m
+[31minvalid value "myip_cidr_block=\\\"2.31.200.46/32\\\"" for flag -var: Cannot parse value for variable myip_cidr_block ("myip_cidr_block=\\\"2.31.200.46/32\\\"") as valid HCL: At 1:17: illegal char[0m[0m
+[31mUsage: terraform plan [options] [dir]
+
+  Generates an execution plan for Terraform.
+
+  This execution plan can be reviewed prior to running apply to get a
+  sense for what Terraform will do. Optionally, the plan can be saved to
+  a Terraform plan file, and apply can take this plan file to execute
+  this plan exactly.
+
+Options:
+
+  -destroy            If set, a plan will be generated to destroy all resources
+                      managed by the given configuration and state.
+
+  -detailed-exitcode  Return detailed exit codes when the command exits. This
+                      will change the meaning of exit codes to:
+                      0 - Succeeded, diff is empty (no changes)
+                      1 - Errored
+                      2 - Succeeded, there is a diff
+
+  -input=true         Ask for input for variables if not directly set.
+
+  -module-depth=n     Specifies the depth of modules to show in the output.
+                      This does not affect the plan itself, only the output
+                      shown. By default, this is -1, which will expand all.
+
+  -no-color           If specified, output won't contain any color.
+
+  -out=path           Write a plan file to the given path. This can be used as
+                      input to the "apply" command.
+
+  -parallelism=n      Limit the number of concurrent operations. Defaults to 10.
+
+  -refresh=true       Update state prior to checking for differences.
+
+  -state=statefile    Path to a Terraform state file to use to look
+                      up Terraform-managed resources. By default it will
+                      use the state "terraform.tfstate" if it exists.
+
+  -target=resource    Resource to target. Operation will be limited to this
+                      resource and its dependencies. This flag can be used
+                      multiple times.
+
+  -var 'foo=bar'      Set a variable in the Terraform configuration. This
+                      flag can be set multiple times.
+
+  -var-file=foo       Set variables in the Terraform configuration from
+                      a file. If "terraform.tfvars" is present, it will be
+                      automatically loaded if this flag is not specified.[0m[0m
+[31minvalid value "myip_cidr_block=\\\"2.31.200.46/32\\\"" for flag -var: Cannot parse value for variable myip_cidr_block ("myip_cidr_block=\\\"2.31.200.46/32\\\"") as valid HCL: At 1:17: illegal char[0m[0m
+[31mUsage: terraform plan [options] [dir]
+
+  Generates an execution plan for Terraform.
+
+  This execution plan can be reviewed prior to running apply to get a
+  sense for what Terraform will do. Optionally, the plan can be saved to
+  a Terraform plan file, and apply can take this plan file to execute
+  this plan exactly.
+
+Options:
+
+  -destroy            If set, a plan will be generated to destroy all resources
+                      managed by the given configuration and state.
+
+  -detailed-exitcode  Return detailed exit codes when the command exits. This
+                      will change the meaning of exit codes to:
+                      0 - Succeeded, diff is empty (no changes)
+                      1 - Errored
+                      2 - Succeeded, there is a diff
+
+  -input=true         Ask for input for variables if not directly set.
+
+  -module-depth=n     Specifies the depth of modules to show in the output.
+                      This does not affect the plan itself, only the output
+                      shown. By default, this is -1, which will expand all.
+
+  -no-color           If specified, output won't contain any color.
+
+  -out=path           Write a plan file to the given path. This can be used as
+                      input to the "apply" command.
+
+  -parallelism=n      Limit the number of concurrent operations. Defaults to 10.
+
+  -refresh=true       Update state prior to checking for differences.
+
+  -state=statefile    Path to a Terraform state file to use to look
+                      up Terraform-managed resources. By default it will
+                      use the state "terraform.tfstate" if it exists.
+
+  -target=resource    Resource to target. Operation will be limited to this
+                      resource and its dependencies. This flag can be used
+                      multiple times.
+
+  -var 'foo=bar'      Set a variable in the Terraform configuration. This
+                      flag can be set multiple times.
+
+  -var-file=foo       Set variables in the Terraform configuration from
+                      a file. If "terraform.tfvars" is present, it will be
+                      automatically loaded if this flag is not specified.[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* dial tcp 52.31.171.137:22: i/o timeout
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* dial tcp 52.209.79.163:22: i/o timeout
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mTwo interrupts received. Exiting immediately. Note that data
+loss may have occurred.[0m[0m
+[31mError applying plan:
+
+2 error(s) occurred:
+
+* aws_security_group.sg-ec2-elb-pubAccess: Error creating Security Group: InvalidGroup.Duplicate: The security group 'VPC:SG:EC2:ELB:PublicAccess' already exists for VPC 'vpc-a66a61c3'
+	status code: 400, request id: 0a290b7f-24c5-44df-b304-fdc285851f7b
+* aws_security_group.sg-ec2-elb-elastica: Error creating Security Group: InvalidGroup.Duplicate: The security group 'VPC:SG:EC2:ELB:Elastica' already exists for VPC 'vpc-a66a61c3'
+	status code: 400, request id: 53bec60d-6495-4ef4-bb36-9ac3c8773e1e
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mErrors:
+[0m[0m
+[31m  * file: open /home/gfisaris/myTerraformProjects/terraform-elastica-cluster/ssh/id_rsa.pub: no such file or directory in:
+
+${file("${path.module}/${var.keypub_path}")}[0m[0m
+[31minvalid value "key_path=../ssh/id_rsa" for flag -var: Cannot parse value for variable key_path ("key_path=../ssh/id_rsa") as valid HCL: At 1:10: Unknown token: 1:10 PERIOD .[0m[0m
+[31mUsage: terraform destroy [options] [DIR]
+
+  Destroy Terraform-managed infrastructure.
+
+Options:
+
+  -backup=path           Path to backup the existing state file before
+                         modifying. Defaults to the "-state-out" path with
+                         ".backup" extension. Set to "-" to disable backup.
+
+  -force                 Don't ask for input for destroy confirmation.
+
+  -no-color              If specified, output won't contain any color.
+
+  -parallelism=n         Limit the number of concurrent operations.
+                         Defaults to 10.
+
+  -refresh=true          Update state prior to checking for differences. This
+                         has no effect if a plan file is given to apply.
+
+  -state=path            Path to read and save state (unless state-out
+                         is specified). Defaults to "terraform.tfstate".
+
+  -state-out=path        Path to write state to that is different than
+                         "-state". This can be used to preserve the old
+                         state.
+
+  -target=resource       Resource to target. Operation will be limited to this
+                         resource and its dependencies. This flag can be used
+                         multiple times.
+
+  -var 'foo=bar'         Set a variable in the Terraform configuration. This
+                         flag can be set multiple times.
+
+  -var-file=foo          Set variables in the Terraform configuration from
+                         a file. If "terraform.tfvars" is present, it will be
+                         automatically loaded if this flag is not specified.[0m[0m
+[31mErrors:
+[0m[0m
+[31m  * file: read /root/myTerraform-Projects/terraform-elastica-cluster/: is a directory in:
+
+${file("${path.module}/${var.keypub_path}")}[0m[0m
+[31mErrors:
+[0m[0m
+[31m  * file: open : no such file or directory in:
+
+${file("${var.keypub_path}")}[0m[0m
+[31mErrors:
+[0m[0m
+[31m  * file: open root/.ssh/id_rsa.pub: no such file or directory in:
+
+${file("${var.keypub_path}")}[0m[0m
+[31minvalid value "key_path=~/.ssh/id_rsa" for flag -var: Cannot parse value for variable key_path ("key_path=~/.ssh/id_rsa") as valid HCL: At 1:10: illegal char[0m[0m
+[31mUsage: terraform plan [options] [dir]
+
+  Generates an execution plan for Terraform.
+
+  This execution plan can be reviewed prior to running apply to get a
+  sense for what Terraform will do. Optionally, the plan can be saved to
+  a Terraform plan file, and apply can take this plan file to execute
+  this plan exactly.
+
+Options:
+
+  -destroy            If set, a plan will be generated to destroy all resources
+                      managed by the given configuration and state.
+
+  -detailed-exitcode  Return detailed exit codes when the command exits. This
+                      will change the meaning of exit codes to:
+                      0 - Succeeded, diff is empty (no changes)
+                      1 - Errored
+                      2 - Succeeded, there is a diff
+
+  -input=true         Ask for input for variables if not directly set.
+
+  -module-depth=n     Specifies the depth of modules to show in the output.
+                      This does not affect the plan itself, only the output
+                      shown. By default, this is -1, which will expand all.
+
+  -no-color           If specified, output won't contain any color.
+
+  -out=path           Write a plan file to the given path. This can be used as
+                      input to the "apply" command.
+
+  -parallelism=n      Limit the number of concurrent operations. Defaults to 10.
+
+  -refresh=true       Update state prior to checking for differences.
+
+  -state=statefile    Path to a Terraform state file to use to look
+                      up Terraform-managed resources. By default it will
+                      use the state "terraform.tfstate" if it exists.
+
+  -target=resource    Resource to target. Operation will be limited to this
+                      resource and its dependencies. This flag can be used
+                      multiple times.
+
+  -var 'foo=bar'      Set a variable in the Terraform configuration. This
+                      flag can be set multiple times.
+
+  -var-file=foo       Set variables in the Terraform configuration from
+                      a file. If "terraform.tfvars" is present, it will be
+                      automatically loaded if this flag is not specified.[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* aws_key_pair.elasticaEC2Admin: Error import KeyPair: InvalidKey.Format: Key is not in valid OpenSSH public key format
+	status code: 400, request id: 6e4a5001-ca75-4696-a781-2486c91bdbe1
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* aws_key_pair.elasticaEC2Admin: Error import KeyPair: InvalidKey.Format: Key is not in valid OpenSSH public key format
+	status code: 400, request id: 8b96a64c-2bf4-4c95-8dec-82aebd8984ab
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mError loading config: Error loading /root/myTerraform-Projects/terraform-elastica-cluster/aws.ec2-keypairs.tf: Error reading config for aws_key_pair[elasticaEC2Admin]: parse error: syntax error[0m[0m
+[31mTwo interrupts received. Exiting immediately. Note that data
+loss may have occurred.[0m[0m
+[31mError configuring: 1 error(s) occurred:
+
+* aws_instance.terraform-ec2_instance-X: missing dependency: template_file.elastica-settings[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* template_file.elastica-cluster: failed to render : 102:22: unknown variable accessed: var.aws_region
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* template_file.elastica-cluster: failed to render : 102:22: unknown variable accessed: var.region
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mUsage: terraform show [options] [path]
+
+  Reads and outputs a Terraform state or plan file in a human-readable
+  form. If no path is specified, the current state will be shown.
+
+Options:
+
+  -module-depth=n     Specifies the depth of modules to show in the output.
+                      By default this is -1, which will expand all.
+
+  -no-color           If specified, output won't contain any color.[0m[0m
+[31mErrors:
+[0m[0m
+[31m  * aws_elb_attachment.elastica-elb_attach-ec2_instace-X: instance must be a single value, not a list[0m[0m
+[31mError refreshing state: 1 error(s) occurred:
+
+* 1 error(s) occurred:
+
+* InvalidClientTokenId: The security token included in the request is invalid.
+	status code: 403, request id: ea3b9335-62ee-11e6-9afc-3be40698ef04[0m[0m
+[31mError refreshing state: 1 error(s) occurred:
+
+* 1 error(s) occurred:
+
+* InvalidClientTokenId: The security token included in the request is invalid.
+	status code: 403, request id: f55ab6a5-62ee-11e6-8492-c5324fe3f0f2[0m[0m
+[31mError refreshing state: 1 error(s) occurred:
+
+* 1 error(s) occurred:
+
+* InvalidClientTokenId: The security token included in the request is invalid.
+	status code: 403, request id: 1c92627a-62ef-11e6-ad64-19695bf368d1[0m[0m
+[31mError refreshing state: 1 error(s) occurred:
+
+* 1 error(s) occurred:
+
+* InvalidClientTokenId: The security token included in the request is invalid.
+	status code: 403, request id: 7706aab8-62ef-11e6-88e9-7bab2e2e501b[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* aws_security_group.sg-ec2-instances-elastica: Error authorizing security group egress rules: InvalidParameterValue: CIDR block sg-171e3d70 is malformed
+	status code: 400, request id: e81e48f4-b316-443e-8d30-7673a8ea0553
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* aws_security_group.sg-ec2-instances-elastica: Error authorizing security group egress rules: InvalidParameterValue: CIDR block sg-f81d3e9f is malformed
+	status code: 400, request id: df1b12d6-6681-4caf-92c2-9437df794d51
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* template_file.elastica-cluster: failed to render : 78:28: unknown variable accessed: es_cluster_number_of_shards
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
