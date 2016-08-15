@@ -69,6 +69,14 @@ cluster.name: ${es_cluster_name}
 #
 node.name: $ES_NODE_NAME
 node.max_local_storage_nodes: 1
+node.master: true
+node.data: true
+
+#
+# --------------------------- Index/Shards/Replicas ----------------------------
+#
+index.number_of_shards: ${es_cluster_number_of_shards}
+index.number_of_replicas: ${es_cluster_number_of_replicas}
 #
 # ----------------------------------- Paths ------------------------------------
 #
@@ -83,6 +91,11 @@ bootstrap.mlockall: true
 #
 network.host: _ec2:privateIpv4_
 http.port: 9200
+#
+# --------------------------------- Discovery ----------------------------------
+#
+discovery.zen.ping.multicast.enabled: false
+discovery.zen.minimum_master_nodes: ${es_cluster_minimum_master_nodes}
 #
 # ---------------------------------- Various -----------------------------------
 #

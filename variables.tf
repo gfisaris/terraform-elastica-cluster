@@ -47,3 +47,7 @@ variable "es_cluster_name" {
   description = "The ElasticSearch Cluster Name"
 }
 
+variable "es_cluster_size" {
+  default = 3
+  description = "Size of the ElasticSearch Cluster"
+}
