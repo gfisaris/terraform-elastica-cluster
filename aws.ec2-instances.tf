@@ -11,7 +11,7 @@ resource "aws_instance" "terraform-ec2_instance-X" {
 		delete_on_termination	= true
 	}
 
-	user_data = "${file("aws.ec2-instance_userdata.sh")}"
+	user_data = "${template_file.elastica-cluster.rendered}"
 
 	tags {
 		"Name"		= "TerraForm Node X"
@@ -25,28 +25,4 @@ resource "aws_instance" "terraform-ec2_instance-X" {
 		agent = "false"
 		timeout = "60s"
 	}
-	
-	provisioner "remote-exec" {
-		inline = [
-			"sudo mkdir -p /terraform/provisioning.scripts/",
-			"sudo chown -R centos:centos /terraform"
-		]
-	}
-	
-	provisioner "file" {
-		source = "provisioning.scripts/"
-		destination = "/terraform/provisioning.scripts/"
-	}
-	
-	provisioner "remote-exec" {
-		inline = [
-			"sudo bash /terraform/provisioning.scripts/execute-initialization.cmds.sh",
-			"sudo bash /terraform/provisioning.scripts/execute-configuration.cmds.sh"
-		]
-	}
-
-	provisioner "local-exec" {
-		command = "curl -X GET 'http://${aws_elb.ec2_elb-Elastica.dns_name}:9200'"
-	}
-
 }
