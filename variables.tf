@@ -13,10 +13,12 @@ variable "aws_region" {
 
 variable "key_path" {
     description = "Path to the private portion of the SSH Key that will be used"
+    default = "~/.ssh/trfm-id_rsa"
 }
 
 variable "keypub_path" {
     description = "Path to the public portion of the SSH Key that will be used"
+    default = "~/.ssh/trfm-id_rsa.pub"
 }
 
 variable "myip_cidr_block" {
