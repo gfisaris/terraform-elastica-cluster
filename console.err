@@ -600,3 +600,37 @@ above and apply again to incrementally change your infrastructure.[0m[0m
 [31mError loading config: Error loading /root/myTerraform-Projects/terraform-elastica-cluster/aws.ec2-keypairs.tf: Error reading config for aws_key_pair[elasticaEC2Admin]: parse error: syntax error[0m[0m
 [31mTwo interrupts received. Exiting immediately. Note that data
 loss may have occurred.[0m[0m
+[31mError configuring: 1 error(s) occurred:
+
+* aws_instance.terraform-ec2_instance-X: missing dependency: template_file.elastica-settings[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* template_file.elastica-cluster: failed to render : 102:22: unknown variable accessed: var.aws_region
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* template_file.elastica-cluster: failed to render : 102:22: unknown variable accessed: var.region
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mUsage: terraform show [options] [path]
+
+  Reads and outputs a Terraform state or plan file in a human-readable
+  form. If no path is specified, the current state will be shown.
+
+Options:
+
+  -module-depth=n     Specifies the depth of modules to show in the output.
+                      By default this is -1, which will expand all.
+
+  -no-color           If specified, output won't contain any color.[0m[0m

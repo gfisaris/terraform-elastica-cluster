@@ -41,3 +41,9 @@ variable "aws_amis" {
     "ap-southeast-2"    = "ami-fedafc9d"
   }
 }
+
+variable "es_cluster_name" {
+  default = "myElasticaCluster"
+  description = "The ElasticSearch Cluster Name"
+}
+

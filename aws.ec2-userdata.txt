@@ -1,0 +1,111 @@
+#!/bin/bash -v
+
+ES_NODE_NAME=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+if [ -z "$ES_NODE_NAME" ]; then
+  ES_NODE_NAME=$(hostname)
+fi
+
+yum clean all
+yum update -y
+
+rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+rpm -Uvh https://centos7.iuscommunity.org/ius-release.rpm
+
+yum -y install yum-priorities
+sed -i "7i priority=10" /etc/yum.repos.d/epel.repo
+
+yum -y update
+
+yum -y groupinstall 'Development Tools'
+
+touch /etc/sysconfig/clock
+echo "ZONE=\"Europe/London\"" >> /etc/sysconfig/clock
+ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
+
+yum -y install ntp
+systemctl enable ntpd.service
+systemctl start ntpd.service
+
+yes | cp -f /etc/ntp.conf /etc/ntp.conf.original
+sed -i -e 's/0.centos.pool.ntp.org/time1.google.com/g' /etc/ntp.conf
+sed -i -e 's/1.centos.pool.ntp.org/time2.google.com/g' /etc/ntp.conf
+sed -i -e 's/2.centos.pool.ntp.org/time3.google.com/g' /etc/ntp.conf
+sed -i -e 's/3.centos.pool.ntp.org/time4.google.com/g' /etc/ntp.conf
+systemctl restart ntpd.service
+
+dd if=/dev/zero of=/mnt/.swapfile bs=1M count=1024
+chown root:root /mnt/.swapfile
+chmod 600 /mnt/.swapfile
+
+mkswap /mnt/.swapfile
+swapon /mnt/.swapfile
+sh -c 'echo "/mnt/.swapfile swap swap defaults 0 0" >> /etc/fstab'
+swapon -a
+
+sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
+setenforce 0
+
+yum install -y java-1.8.0-openjdk*
+
+rpm -Uvh https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/rpm/elasticsearch/2.3.5/elasticsearch-2.3.5.rpm
+
+systemctl enable elasticsearch.service
+systemctl start elasticsearch.service
+
+sudo yes|/usr/share/elasticsearch/bin/plugin install cloud-aws
+service elasticsearch restart
+
+
+cat <<EOT >> /etc/elasticsearch/elasticsearch.yml
+#
+# ----------------------------- my Configurations -----------------------------
+#
+
+# ---------------------------------- Cluster -----------------------------------
+#
+cluster.name: ${es_cluster_name}
+#
+# ------------------------------------ Node ------------------------------------
+#
+node.name: $ES_NODE_NAME
+node.max_local_storage_nodes: 1
+#
+# ----------------------------------- Paths ------------------------------------
+#
+path.conf: /etc/elasticsearch
+path.logs: /var/log/elasticsearch
+#
+# ----------------------------------- Memory -----------------------------------
+#
+bootstrap.mlockall: true
+#
+# ---------------------------------- Network -----------------------------------
+#
+network.host: _ec2:privateIpv4_
+http.port: 9200
+#
+# ---------------------------------- Various -----------------------------------
+#
+action.destructive_requires_name: true
+cloud.node.auto_attributes: true
+#
+# -------------------------- Custom Configuration --------------------------
+#
+cloud.aws.region: ${aws_region}
+cloud.aws.access_key: ${aws_access_key}
+cloud.aws.secret_key: ${aws_secret_key}
+cluster.routing.allocation.awareness.attributes: aws_availability_zone
+cluster.routing.allocation.awareness.force.zone.values: ["eu-west-1a", "eu-west-1b", "eu-west-1c"]
+discovery.ec2.availability_zones: ["eu-west-1a", "eu-west-1b", "eu-west-1c"]
+discovery.ec2.groups: ["${aws_vpc_security_groups}"]
+discovery.ec2.host_type: private_ip
+discovery.ec2.ping_timeout: 3s
+ 
+discovery.ec2.tag.es_cluster: ${es_cluster_name}
+
+discovery.type: ec2
+plugin.madatory: cloud-aws
+
+EOT
+
+service elasticsearch restart
