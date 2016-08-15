@@ -16,6 +16,7 @@ resource "aws_instance" "terraform-ec2_instance-X" {
 
 	tags {
 		"Name"		= "${var.es_cluster_name}-node${count.index}"
+		"es_cluster"	= "${var.es_cluster_name}"
 	}
 
 	connection {
