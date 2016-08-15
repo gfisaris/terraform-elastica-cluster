@@ -42,14 +42,6 @@ swapon /mnt/.swapfile
 sh -c 'echo "/mnt/.swapfile swap swap defaults 0 0" >> /etc/fstab'
 swapon -a
 
-if sudo file -s /dev/xvde | grep '/dev/xvde: data' > /dev/null; then
-  sudo mkfs -t ext4 /dev/xvde
-  sudo mkdir -p /mnt/ebs.volumes/es-data
-  sudo mount /dev/xvde /mnt/ebs.volumes/es-data
-  sudo chown -R elasticsearch:elasticsearch /mnt/ebs.volumes/es-data
-  grep -q '^/dev/xvde' /etc/fstab && sed -i 's/^\/dev\/xvde.*/\/dev\/xvde \/srv\/ebs.volumes\/es-data ext4 defaults,nofail 0 2/' /etc/fstab || echo '/dev/xvde /mnt/ebs.volumes/es-data ext4 defaults,nofail 0 2' >> /etc/fstab
-fi
-
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
 setenforce 0
 
@@ -60,9 +52,14 @@ rpm -Uvh https://download.elastic.co/elasticsearch/release/org/elasticsearch/dis
 systemctl enable elasticsearch.service
 systemctl start elasticsearch.service
 
-sudo yes|/usr/share/elasticsearch/bin/plugin install cloud-aws
+yes | /usr/share/elasticsearch/bin/plugin install cloud-aws
 service elasticsearch restart
 
+mkfs -t ext4 /dev/xvde
+mkdir -p /mnt/ebs.volumes/es-data
+mount /dev/xvde /mnt/ebs.volumes/es-data
+chown -R elasticsearch:elasticsearch /mnt/ebs.volumes/es-data
+grep -q '^/dev/xvde' /etc/fstab && sed -i 's/^\/dev\/xvde.*/\/dev\/xvde \/srv\/ebs.volumes\/es-data ext4 defaults,nofail 0 2/' /etc/fstab || echo '/dev/xvde /mnt/ebs.volumes/es-data ext4 defaults,nofail 0 2' >> /etc/fstab
 
 cat <<EOT >> /etc/elasticsearch/elasticsearch.yml
 #
@@ -114,8 +111,6 @@ cloud.node.auto_attributes: true
 # -------------------------- Custom Configuration --------------------------
 #
 cloud.aws.region: ${aws_region}
-cloud.aws.access_key: ${aws_access_key}
-cloud.aws.secret_key: ${aws_secret_key}
 cluster.routing.allocation.awareness.attributes: aws_availability_zone
 cluster.routing.allocation.awareness.force.zone.values: ["eu-west-1a", "eu-west-1b", "eu-west-1c"]
 discovery.ec2.availability_zones: ["eu-west-1a", "eu-west-1b", "eu-west-1c"]

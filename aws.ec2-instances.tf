@@ -6,7 +6,7 @@ resource "aws_instance" "terraform-ec2_instance-X" {
 	key_name		= "${aws_key_pair.elasticaEC2Admin.key_name}"
 	vpc_security_group_ids	= ["${aws_security_group.sg-ec2-instances-elastica.id}"]
 
-	iam_instance_profile	= "${aws_iam_instance_profile.es-ec2instance.id}"
+	iam_instance_profile = "${aws_iam_instance_profile.es-ec2instance.id}"
 
 	root_block_device {
 		volume_type		= "gp2"
@@ -16,10 +16,9 @@ resource "aws_instance" "terraform-ec2_instance-X" {
 
 	ebs_block_device {
 		device_name           = "/dev/sde"
-		volume_type           = "io1"
-		iops 		      = 3000
+		volume_type           = "gp2"
 		volume_size           = "${var.volume_esdata_size}"
-		delete_on_termination = false
+		delete_on_termination = true
 	}
 
 	user_data = "${template_file.elastica-cluster.rendered}"
@@ -41,4 +40,6 @@ resource "aws_instance" "terraform-ec2_instance-X" {
 	lifecycle {
 		create_before_destroy = true
 	}
+
+
 }
