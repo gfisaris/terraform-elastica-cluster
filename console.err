@@ -634,3 +634,62 @@ Options:
                       By default this is -1, which will expand all.
 
   -no-color           If specified, output won't contain any color.[0m[0m
+[31mErrors:
+[0m[0m
+[31m  * aws_elb_attachment.elastica-elb_attach-ec2_instace-X: instance must be a single value, not a list[0m[0m
+[31mError refreshing state: 1 error(s) occurred:
+
+* 1 error(s) occurred:
+
+* InvalidClientTokenId: The security token included in the request is invalid.
+	status code: 403, request id: ea3b9335-62ee-11e6-9afc-3be40698ef04[0m[0m
+[31mError refreshing state: 1 error(s) occurred:
+
+* 1 error(s) occurred:
+
+* InvalidClientTokenId: The security token included in the request is invalid.
+	status code: 403, request id: f55ab6a5-62ee-11e6-8492-c5324fe3f0f2[0m[0m
+[31mError refreshing state: 1 error(s) occurred:
+
+* 1 error(s) occurred:
+
+* InvalidClientTokenId: The security token included in the request is invalid.
+	status code: 403, request id: 1c92627a-62ef-11e6-ad64-19695bf368d1[0m[0m
+[31mError refreshing state: 1 error(s) occurred:
+
+* 1 error(s) occurred:
+
+* InvalidClientTokenId: The security token included in the request is invalid.
+	status code: 403, request id: 7706aab8-62ef-11e6-88e9-7bab2e2e501b[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* aws_security_group.sg-ec2-instances-elastica: Error authorizing security group egress rules: InvalidParameterValue: CIDR block sg-171e3d70 is malformed
+	status code: 400, request id: e81e48f4-b316-443e-8d30-7673a8ea0553
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* aws_security_group.sg-ec2-instances-elastica: Error authorizing security group egress rules: InvalidParameterValue: CIDR block sg-f81d3e9f is malformed
+	status code: 400, request id: df1b12d6-6681-4caf-92c2-9437df794d51
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+[31mError applying plan:
+
+1 error(s) occurred:
+
+* template_file.elastica-cluster: failed to render : 78:28: unknown variable accessed: es_cluster_number_of_shards
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m

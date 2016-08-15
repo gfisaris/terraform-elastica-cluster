@@ -13,7 +13,7 @@ resource "aws_elb" "ec2_elb-Elastica" {
     healthy_threshold = 3
     unhealthy_threshold = 2
     timeout = 2
-    target = "HTTP:9200/"
+    target = "HTTP:9200/_cluster/health"
     interval = 5
   }
 
@@ -22,6 +22,7 @@ resource "aws_elb" "ec2_elb-Elastica" {
   connection_draining = true
   connection_draining_timeout = 300
 
+  instances = ["${aws_instance.terraform-ec2_instance-X.*.id}"]
   security_groups = ["${aws_security_group.sg-ec2-elb-pubAccess.id}","${aws_security_group.sg-ec2-elb-elastica.id}"]
 
   tags {

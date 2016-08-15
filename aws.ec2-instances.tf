@@ -1,4 +1,5 @@
 resource "aws_instance" "terraform-ec2_instance-X" {
+	count           = "${var.es_cluster_size}"
 	ami		= "${lookup(var.aws_amis, var.aws_region)}"
 	instance_type	= "t2.micro"
 	
@@ -14,7 +15,7 @@ resource "aws_instance" "terraform-ec2_instance-X" {
 	user_data = "${template_file.elastica-cluster.rendered}"
 
 	tags {
-		"Name"		= "TerraForm Node X"
+		"Name"		= "${var.es_cluster_name}-node${count.index}"
 	}
 
 	connection {
@@ -24,5 +25,9 @@ resource "aws_instance" "terraform-ec2_instance-X" {
 		private_key = "${file("${var.key_path}")}"
 		agent = "false"
 		timeout = "60s"
+	}
+
+	lifecycle {
+		create_before_destroy = true
 	}
 }
