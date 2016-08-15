@@ -1,0 +1,4 @@
+console.out
+console.err
+terraform.tfstate
+terraform.tfstate.backup

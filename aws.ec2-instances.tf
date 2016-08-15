@@ -15,6 +15,7 @@ resource "aws_instance" "terraform-ec2_instance-X" {
 	ebs_block_device {
 		device_name           = "/dev/sde"
 		volume_type           = "io1"
+		iops 		      = 3000
 		volume_size           = "${var.volume_esdata_size}"
 		delete_on_termination = false
 	}
