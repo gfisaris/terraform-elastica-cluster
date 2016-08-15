@@ -51,3 +51,13 @@ variable "es_cluster_size" {
   default = 3
   description = "Size of the ElasticSearch Cluster"
 }
+
+variable "volume_root_size" {
+  default = 10
+  description = "Size of the OS Volume"
+}
+
+variable "volume_esdata_size" {
+  default = 100
+  description = "Size of the ElasticSearch Data Voloume"
+}

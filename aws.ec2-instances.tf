@@ -8,8 +8,15 @@ resource "aws_instance" "terraform-ec2_instance-X" {
 
 	root_block_device {
 		volume_type		= "gp2"
-		volume_size		= 10
+		volume_size		= "${var.volume_root_size}"
 		delete_on_termination	= true
+	}
+
+	ebs_block_device {
+		device_name           = "/dev/sde"
+		volume_type           = "io1"
+		volume_size           = "${var.volume_esdata_size}"
+		delete_on_termination = false
 	}
 
 	user_data = "${template_file.elastica-cluster.rendered}"
